@@ -1,12 +1,11 @@
 import React, { Component } from 'react'
-
-import ExampleComponent from 'react-shepherd'
+import ShepherdTour from 'react-shepherd';
 
 export default class App extends Component {
   render () {
     return (
       <div>
-        <ExampleComponent text='Modern React component module' />
+        <ShepherdTour text='Modern React component module' />
       </div>
     )
   }
