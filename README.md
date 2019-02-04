@@ -1,6 +1,6 @@
 # react-shepherd
 
-> 
+>
 
 [![NPM](https://img.shields.io/npm/v/react-shepherd.svg)](https://www.npmjs.com/package/react-shepherd) [![JavaScript Style Guide](https://img.shields.io/badge/code_style-standard-brightgreen.svg)](https://standardjs.com)
 
@@ -28,4 +28,4 @@ class Example extends Component {
 
 ## License
 
-MIT © [chuckcarpenter](https://github.com/chuckcarpenter)
+MIT
