@@ -2,3 +2,101 @@ language: node_js
 node_js:
   - 9
   - 8
+
+sudo: false
+dist: trusty
+
+addons:
+  chrome: stable
+  code_climate:
+    repo_token:
+      secure: "Ilc67FyHl9y9v0e86T9+foBEhWapwwLfqH2T+sc9T8LeaXP+yaE6gf8RjvEALnmcYLWmF3/ZlJsAhpMBJV2I9CV48LPT8qUL7B3AM7EBeLk7GA5q0pEBU90eAW04vNWH9rMXRTaQ6t/me9UvpoFHNghC+Y+J8N/l6g4xF1qjiBA="
+
+cache:
+  yarn: true
+
+env:
+  global:
+    # See https://git.io/vdao3 for details.
+    - JOBS=1
+    - secure: K5sRZBHXcHoYfpYEul1tcK2hOp9QMV/T8xmfj1q20AKzw/+ovbsp+Pdb+PbKFr5vP4eN0ISAeHU3nseMGD9tW6BI/Jf1wW4r7qvGch9eH5v1fpAn7Xxm4AqxusxNck7j4uuo720J5nqioZPUjY5ynlgF0iuGJKjx3YVP7t8W4HQ=
+    - secure: NbSFG5O6U/6gBMG42vNoRY7Vt0TrDCGunM6MAsTENoRSAN5JFJ1Ne5HfSmOV4hyT63rSTUbNT1zBmqHCfUpZFp+ynVTS3Fs6jv6qgZSZm6l3k5SW1ZGFbDUjxCWuX2lg6n6dV2LyLTnnONa/U/OAb4FkceW9MeKVNjPNv/uYdEA=
+
+before_install:
+  - yarn global add greenkeeper-lockfile@1
+
+install:
+  - yarn install --ignore-engines
+
+jobs:
+  include:
+    - stage: test
+      before_script:
+        - greenkeeper-lockfile-update
+      script:
+        - yarn test
+      after_script:
+        - greenkeeper-lockfile-upload
+        - yarn rewrite-paths
+        - codeclimate-test-reporter < coverage/lcov.info
+    - stage: npm release
+      script:
+        - yarn build
+      # Identifies `a.b.c-xxx.n` tags as pre-releases, and `a.b.c` as stable releases
+      before_deploy: |
+        function npm_dist_tag() {
+          if [[ "$TRAVIS_TAG" = *"-"* ]]; then
+            echo "next"
+          else
+            echo "latest"
+          fi
+        }
+      deploy:
+        provider: npm
+        tag: $(npm_dist_tag)
+        email: rwwagner90@gmail.com
+        skip_cleanup: true
+        api_key:
+          secure: "qmXLSbGcujfLg8h+cJFjJtrEBeWGqd1CdhOex3TOCz93BrJUQf7he66HCBJaJ178qEYTnw4WKjjlcfbYO29H88Z+jnrS5KJydmRg0D3rkPSxcD8TMK3d8vRUTDl+UubuqPnN8jG4IqGfpM1z7WPSN1WSTjFK648S261bK7w88JY="
+        on:
+          branch: master
+          tags: true
+          repo: shipshapecode/react-shepherd
+        after_deploy: |
+          if [ "$(npm_dist_tag)" == "latest" ]; then
+            npm dist-tag rm shepherd.js next || true
+          fi
+    - stage: github releases
+      script:
+        - yarn build
+      # Identifies `a.b.c-xxx.n` tags as pre-releases, and `a.b.c` as stable releases
+      before_deploy: |
+        function gh_prerelease() {
+          if [[ "$TRAVIS_TAG" = *"-"* ]]; then
+            echo true
+          else
+            echo false
+          fi
+        }
+      deploy:
+        provider: releases
+        api_key: $GH_TOKEN
+        file_glob: true
+        file:
+          - dist/*
+        skip_cleanup: true
+        prerelease: $(gh_prerelease)
+        on:
+          tags: true
+    - stage: gh-pages release
+      script:
+        - yarn build
+      before_deploy:
+        - git add -f --all dist/
+      deploy:
+        provider: pages
+        skip-cleanup: true
+        github-token: $GH_TOKEN
+        keep-history: true
+        on:
+          branch: master

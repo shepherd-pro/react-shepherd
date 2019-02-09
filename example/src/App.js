@@ -1,5 +1,6 @@
 import React, { Component } from 'react'
 import {ShepherdTour, TourMethods} from 'react-shepherd'
+import HomePage from './home'
 import newSteps from './steps'
 
 const defaultStepOptions = { showCancelLink: true };
@@ -24,16 +25,15 @@ export default class App extends Component {
 function Content() {
   return (
     <div>
-      <TourMethods>
-        {({startTour}) => (
-          <button
-            className='button dark'
-            onClick={startTour}
-          >
-            Start Tour
-          </button>
-        )}
-      </TourMethods>
+      <HomePage>
+        <TourMethods>
+          {({ startTour }) => (
+            <button className="button dark" onClick={startTour}>
+              Start Tour
+            </button>
+          )}
+        </TourMethods>
+      </HomePage>
     </div>
   );
 }

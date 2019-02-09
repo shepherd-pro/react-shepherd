@@ -5,7 +5,7 @@ html, body {
 
 body {
   background-color: #61dbfb;
-  background-image: linear-gradient(-45deg, #00d8ff, #61dbfb);
+  background-image: linear-gradient(-45deg, #61dbfb, #1a8598);
   font-family: "proxima-nova", "Helvetica Neue", sans-serif;
   margin: 0;
 }
@@ -28,6 +28,11 @@ body {
 .button.dark {
   background: #ffffff;
   color: #212047;
+}
+
+button.button {
+  background: transparent;
+  width: auto;
 }
 
 @media (max-width: 568px) {
@@ -347,7 +352,7 @@ pre {
   vertical-align: middle;
   *vertical-align: auto;
   *zoom: 1;
-  background: #55a892;
+  background: #557ca8;
   border: 0;
   border-radius: 3px;
   color: rgba(255, 255, 255, 0.75);
@@ -363,7 +368,7 @@ pre {
 }
 
 .shepherd-element .shepherd-content footer .shepherd-buttons li .shepherd-button:hover {
-  background: #448675;
+  background: #0a1632;
 }
 
 .shepherd-element .shepherd-content footer .shepherd-buttons li .shepherd-button.shepherd-button-secondary {
