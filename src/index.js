@@ -2,6 +2,8 @@ import React, { Component } from 'react'
 import PropTypes from 'prop-types'
 import Shepherd from 'shepherd.js'
 
+import 'shepherd.js/dist/css/shepherd-theme-default.css'
+
 const internalMethods = [
   'back',
   'cancel',
