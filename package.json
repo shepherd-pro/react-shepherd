@@ -58,7 +58,8 @@
   "files": [
     "dist"
   ],
+  "homepage": "https://shipshapecode.github.io/react-shepherd/",
   "dependencies": {
-    "shepherd.js": "^2.3.3"
+    "shepherd.js": "^2.5.0"
   }
 }

@@ -37,13 +37,21 @@ export default class HomePage extends Component {
             {this.props.children}
             <centered>
               <h5>Installation</h5>
-              <SyntaxHighlighter language="javascript" style={duotoneLight}>
+              <SyntaxHighlighter
+                className='install-element'
+                language="javascript"
+                style={duotoneLight}
+              >
                 {installString}
               </SyntaxHighlighter>
             </centered>
             <centered>
               <h5>Usage</h5>
-              <SyntaxHighlighter language="javascript" style={duotoneLight}>
+              <SyntaxHighlighter
+                className='usage-element'
+                language="javascript"
+                style={duotoneLight}
+              >
                 {usageString}
               </SyntaxHighlighter>
             </centered>

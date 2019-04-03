@@ -10,11 +10,7 @@ export default [
       `,
         `
         Among many things, Tippy makes sure your steps never end up off screen or cropped by an overflow.
-        (Try resizing your browser to see what we mean.)
-      `,
-        `
-        It also offers a robust API for styling animations of steps
-        as they enter and exit the view.
+        Try resizing your browser to see what we mean.
       `
       ],
       attachTo: '.hero-welcome bottom',
@@ -24,7 +20,8 @@ export default [
           type: 'cancel',
           classes: 'shepherd-button-secondary',
           text: 'Exit'
-        }, {
+        },
+        {
           type: 'next',
           text: 'Next'
         }
@@ -32,17 +29,19 @@ export default [
     }
   },
   {
-    id: 'including',
+    id: 'installation',
     options: {
-      title: 'Including',
-      text: 'Including Shepherd is easy! Just include tippy.all.min.js, shepherd.js, and a Shepherd theme file.',
-      attachTo: '.hero-including bottom',
+      title: 'Installation',
+      text:
+        'Installation is simple, if you are using npm, just install like any other package.',
+      attachTo: '.install-element bottom',
       buttons: [
         {
           type: 'back',
           classes: 'shepherd-button-secondary',
           text: 'Back'
-        }, {
+        },
+        {
           type: 'next',
           text: 'Next'
         }
@@ -50,18 +49,20 @@ export default [
     }
   },
   {
-    id: 'creating',
+    id: 'usage',
     options: {
-      title: 'Creating a Shepherd Tour',
-      text: `Creating a Shepherd tour is easy. too!\
-      Just create a \`Tour\` instance, and add as many steps as you want.`,
-      attachTo: '.hero-example bottom',
+      title: 'Usage',
+      text: [
+        'To use the tour service, simply inject it into your application and use it like this example.'
+      ],
+      attachTo: '.usage-element bottom',
       buttons: [
         {
           type: 'back',
           classes: 'shepherd-button-secondary',
           text: 'Back'
-        }, {
+        },
+        {
           type: 'next',
           text: 'Next'
         }
@@ -69,20 +70,27 @@ export default [
     }
   },
   {
-    id: 'attaching',
+    id: 'modal',
     options: {
-      title: 'Attaching to Elements',
-      text: `Your tour steps can target and attach to elements in DOM (like this step).`,
-      attachTo: '.hero-example bottom',
+      attachTo: {
+        element: '.modal-element',
+        on: 'top'
+      },
       buttons: [
         {
           type: 'back',
           classes: 'shepherd-button-secondary',
           text: 'Back'
-        }, {
+        },
+        {
           type: 'next',
           text: 'Next'
         }
+      ],
+      classes: 'custom-class-name-1 custom-class-name-2',
+      text: [
+        'We implemented true modal functionality by disabling clicking of the rest of the page.',
+        "If you would like to enable modal, simply do this.get('tour').set('modal', true)."
       ]
     }
   },
@@ -98,7 +106,8 @@ export default [
           type: 'back',
           classes: 'shepherd-button-secondary',
           text: 'Back'
-        }, {
+        },
+        {
           type: 'next',
           text: 'Next'
         }
@@ -116,11 +125,12 @@ export default [
           type: 'back',
           classes: 'shepherd-button-secondary',
           text: 'Back'
-        }, {
+        },
+        {
           type: 'next',
           text: 'Done'
         }
       ]
     }
   }
-]
+];
