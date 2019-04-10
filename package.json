@@ -12,8 +12,8 @@
     "npm": ">=5"
   },
   "scripts": {
-    "test": "cross-env CI=1 react-scripts test --env=jsdom",
-    "test:watch": "react-scripts test --env=jsdom",
+    "test": "cross-env CI=1 react-scripts test",
+    "test:watch": "react-scripts test",
     "build": "rollup -c",
     "start": "rollup -c -w",
     "prepare": "yarn run build",
@@ -45,7 +45,7 @@
     "gh-pages": "^1.2.0",
     "react": "^16.4.1",
     "react-dom": "^16.4.1",
-    "react-scripts": "^1.1.4",
+    "react-scripts": "2.0.3",
     "react-syntax-highlighter": "^10.1.2",
     "rollup": "^0.64.1",
     "rollup-plugin-babel": "^3.0.7",
