@@ -1,7 +1,6 @@
 language: node_js
 node_js:
-  - 9
-  - 8
+  - '10'
 
 sudo: false
 dist: trusty
@@ -28,6 +27,11 @@ before_install:
 install:
   - yarn install --ignore-engines
 
+stages:
+  - test
+  - npm release
+  - gh-pages release
+
 jobs:
   include:
     - stage: test
@@ -39,6 +43,33 @@ jobs:
         - greenkeeper-lockfile-upload
         - yarn rewrite-paths
         - codeclimate-test-reporter < coverage/lcov.info
+    - stage: npm release
+      script:
+        - yarn build
+      # Identifies `a.b.c-xxx.n` tags as pre-releases, and `a.b.c` as stable releases
+      before_deploy: |
+        function npm_dist_tag() {
+          if [[ "$TRAVIS_TAG" = *"-"* ]]; then
+            echo "next"
+          else
+            echo "latest"
+          fi
+        }
+      deploy:
+        provider: npm
+        tag: $(npm_dist_tag)
+        email: chuck.carpenter@me.com
+        skip_cleanup: true
+        api_key:
+          secure: sfjX4OM8lWwyFrzTcypyx4W9ohK+72xdse0Fn2g9jm+pu5EH3ySgmgQ0qinxS5HrOvY8M0wDMU9MqSLI07LDCd3IhNvOSn2KIUlxtO50W6n5Ongh6e0g8jJsRE+pmQq5dX+EdtfDHzxW4Xn3A1zCymcAyMFIiHY+sLtNEDmyDuisEbzx6ZaAvdq09TIR8LnReHRz8+KGDsQ4a3UQt9UCtOc2VFX+uNG6xyt1AV8/gVmgiB4Sqwp1gWluM7P6axY7dtdlJiD8LFdUJ+hbkNJAJ7kwwzVqXsejt5x4qNltPC3Z3SfH5nmZQ8kWARLPZkQvdGQfBLz3Ds+GB/bhKc+X4GmPf5C4eM0u1VRdZDwGtyYdqbJcntlAyNrasFTdd8nNSOdwkhUnFMxD1CnaQQggeGtiELzcVXFsGDyIVLmjHEjyF4L6iiVhPko2KptWDq7ixNTLkGpxXEXAS07H/RtTR6zUXiC+bHlaZIy+ng5FHEvvOyF/ffOqrEsSncSlpE3VPSFFSBVM+bfvVLzFf7EDaIeC7GudPY1cURpIL1CIiuMUCEDVakRc1P/xcUGx4bJ7EbzS6UsODQjy1uwJsHICQvHCgmNluxdbBPIXwFVLj2tUN20lM52YvsBdUEtd93Zg61yjaDC2UYQPFCFfZSOGJ1XBOV2qlzKhKc2FZ5CNBAg=
+        on:
+          branch: master
+          tags: true
+          repo: shipshapecode/react-shepherd
+        after_deploy: |
+          if [ "$(npm_dist_tag)" == "latest" ]; then
+            npm dist-tag rm shepherd.js next || true
+          fi
     - stage: gh-pages release
       script:
         - yarn deploy
