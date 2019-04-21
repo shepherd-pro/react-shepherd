@@ -73,8 +73,6 @@ jobs:
             npm dist-tag rm shepherd.js next || true
           fi
     - stage: gh-pages release
-      script:
-        - yarn deploy
       deploy:
         provider: pages
         skip-cleanup: true
