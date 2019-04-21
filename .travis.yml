@@ -29,7 +29,8 @@ install:
 
 stages:
   - test
-  - npm release
+  - name: npm release
+    if: (tag =~ ^v) AND (branch = master)
   - name: gh-pages release
     if: branch = master
 
