@@ -30,7 +30,8 @@ install:
 stages:
   - test
   - npm release
-  - gh-pages release
+  - name: gh-pages release
+    if: branch = master
 
 jobs:
   include:
