@@ -80,6 +80,5 @@ jobs:
         skip-cleanup: true
         github-token: $GITHUB_TOKEN
         keep-history: true
-        email: chuck.carpenter@me.com
         on:
           branch: master
