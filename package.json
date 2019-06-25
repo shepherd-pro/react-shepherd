@@ -74,6 +74,6 @@
   ],
   "homepage": "https://shipshapecode.github.io/react-shepherd/",
   "dependencies": {
-    "shepherd.js": "^2.5.0"
+    "shepherd.js": "^3.1.0"
   }
 }
