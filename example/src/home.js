@@ -1,6 +1,6 @@
 import React, { Component } from 'react'
 import { Prism as SyntaxHighlighter } from 'react-syntax-highlighter'
-import { duotoneLight } from 'react-syntax-highlighter/dist/styles/prism'
+import { duotoneLight } from 'react-syntax-highlighter/dist/esm/styles/prism'
 
 const installString = 'yarn add react-shepherd'
 const usageString = `
