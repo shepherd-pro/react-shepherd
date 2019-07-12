@@ -32,10 +32,10 @@ export default class HomePage extends Component {
   render() {
     return (
       <div>
-        <hbox justify="center">
-          <box fill xs="11" md="5">
+        <div>
+          <div>
             {this.props.children}
-            <centered>
+            <div>
               <h5>Installation</h5>
               <SyntaxHighlighter
                 className='install-element'
@@ -44,8 +44,8 @@ export default class HomePage extends Component {
               >
                 {installString}
               </SyntaxHighlighter>
-            </centered>
-            <centered>
+            </div>
+            <div>
               <h5>Usage</h5>
               <SyntaxHighlighter
                 className='usage-element'
@@ -54,9 +54,9 @@ export default class HomePage extends Component {
               >
                 {usageString}
               </SyntaxHighlighter>
-            </centered>
-          </box>
-        </hbox>
+            </div>
+          </div>
+        </div>
       </div>
     );
   }
