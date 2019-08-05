@@ -92,7 +92,8 @@ export class ShepherdTour extends Component {
             return {
               action: tour[type],
               classes,
-              text
+              text,
+              type
             }
           }
         )
