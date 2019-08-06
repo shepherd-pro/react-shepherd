@@ -1,8 +1,6 @@
-import React, { Component } from 'react'
-import PropTypes from 'prop-types'
-import Shepherd from 'shepherd.js'
-
-import 'shepherd.js/dist/css/shepherd-theme-default.css'
+import React, { Component } from 'react';
+import PropTypes from 'prop-types';
+import Shepherd from 'shepherd.js';
 
 const internalMethods = [
   'back',
@@ -12,10 +10,10 @@ const internalMethods = [
   'next',
   'show',
   'startTour'
-]
+];
 
-const ShepherdTourContext = React.createContext()
-const ShepherdTourContextConsumer = ShepherdTourContext.Consumer
+const ShepherdTourContext = React.createContext();
+const ShepherdTourContextConsumer = ShepherdTourContext.Consumer;
 
 export class ShepherdTour extends Component {
   static propTypes = {
@@ -26,13 +24,13 @@ export class ShepherdTour extends Component {
     tourName: PropTypes.string,
     steps: PropTypes.array,
     useModalOverlay: PropTypes.bool
-  }
+  };
 
   constructor(props) {
-    super(props)
-    window.Shepherd = Shepherd
+    super(props);
+    window.Shepherd = Shepherd;
 
-    this._bindMethods(internalMethods)
+    this._bindMethods(internalMethods);
 
     const {
       confirmCancel,
@@ -41,7 +39,7 @@ export class ShepherdTour extends Component {
       tourName,
       useModalOverlay,
       steps
-    } = this.props
+    } = this.props;
 
     const tourObject = new Shepherd.Tour({
       confirmCancel,
@@ -49,24 +47,24 @@ export class ShepherdTour extends Component {
       defaultStepOptions,
       tourName,
       useModalOverlay
-    })
+    });
 
-    tourObject.on('start', this.onTourStart.bind(this))
-    tourObject.on('complete', this.onTourFinish.bind(this), 'complete')
-    tourObject.on('cancel', this.onTourFinish.bind(this), 'cancel')
+    tourObject.on('start', this.onTourStart.bind(this));
+    tourObject.on('complete', this.onTourFinish.bind(this), 'complete');
+    tourObject.on('cancel', this.onTourFinish.bind(this), 'cancel');
 
-    this.tourObject = tourObject
+    this.tourObject = tourObject;
     this.tourState = {
       disableScroll: false,
       isActive: false,
       startTour: this.startTour
-    }
+    };
 
-    this.addSteps(steps)
+    this.addSteps(steps);
   }
 
   componentWillUnmount() {
-    this._cleanup()
+    this._cleanup();
   }
 
   /**
@@ -75,15 +73,15 @@ export class ShepherdTour extends Component {
    * @private
    */
   addSteps(steps) {
-    const tour = this.tourObject
+    const tour = this.tourObject;
 
     // Return nothing if there are no steps
     if (!steps.length) {
-      return []
+      return [];
     }
 
     steps.forEach((step, index) => {
-      const { id, options } = step
+      const { id, options } = step;
 
       if (options.buttons) {
         options.buttons = options.buttons.map(
@@ -96,41 +94,40 @@ export class ShepherdTour extends Component {
               type
             }
           }
-        )
+        );
       }
 
-      // options.attachTo = normalizeAttachTo(options.attachTo)
-      tour.addStep(id, options)
+      tour.addStep(id, options);
 
       // Step up events for the current step
-      const currentStep = tour.steps[index]
+      const currentStep = tour.steps[index];
 
       if (!currentStep.options.scrollToHandler) {
-        currentStep.options.scrollToHandler = (elem) => {
+        currentStep.options.scrollToHandler = elem => {
           // Allow scrolling so scrollTo works.
-          this.tourState.disableScroll.off(window)
+          this.tourState.disableScroll.off(window);
 
           if (typeof elem !== 'undefined') {
-            elem.scrollIntoView()
+            elem.scrollIntoView();
           }
 
           setTimeout(() => {
             if (this.tourState.disableScroll) {
-              this.tourState.disableScroll.on(window)
+              this.tourState.disableScroll.on(window);
             }
-          }, 50)
-        }
+          }, 50);
+        };
       }
-    })
+    });
   }
 
   /**
-  * Get the tour object and call back
-  * @public
-  */
+   * Get the tour object and call back
+   * @public
+   */
   back() {
-    this.tourObject.back()
-    Shepherd.trigger('back')
+    this.tourObject.back();
+    Shepherd.trigger('back');
   }
 
   /**
@@ -138,7 +135,7 @@ export class ShepherdTour extends Component {
    * @public
    */
   cancel() {
-    this.tourObject.cancel()
+    this.tourObject.cancel();
   }
 
   /**
@@ -146,7 +143,7 @@ export class ShepherdTour extends Component {
    * @public
    */
   complete() {
-    this.tourObject.complete()
+    this.tourObject.complete();
   }
 
   /**
@@ -154,7 +151,7 @@ export class ShepherdTour extends Component {
    * @public
    */
   hide() {
-    this.tourObject.hide()
+    this.tourObject.hide();
   }
 
   /**
@@ -162,8 +159,8 @@ export class ShepherdTour extends Component {
    * @public
    */
   next() {
-    this.tourObject.next()
-    Shepherd.trigger('next')
+    this.tourObject.next();
+    Shepherd.trigger('next');
   }
 
   /**
@@ -172,7 +169,7 @@ export class ShepherdTour extends Component {
    * @public
    */
   show(id) {
-    this.tourObject.show(id)
+    this.tourObject.show(id);
   }
 
   /**
@@ -180,8 +177,8 @@ export class ShepherdTour extends Component {
    * @public
    */
   startTour() {
-    this.tourState.isActive = true
-    this.tourObject.start()
+    this.tourState.isActive = true;
+    this.tourObject.start();
   }
 
   /**
@@ -189,10 +186,10 @@ export class ShepherdTour extends Component {
    */
   onTourStart() {
     if (this.tourState.disableScroll) {
-      this.tourState.disableScroll.on(window)
+      this.tourState.disableScroll.on(window);
     }
 
-    Shepherd.trigger('start')
+    Shepherd.trigger('start');
   }
 
   /**
@@ -200,10 +197,10 @@ export class ShepherdTour extends Component {
    * @param {string} completeOrCancel 'complete' or 'cancel'
    */
   onTourFinish(completeOrCancel) {
-    this.tourState.isActive = false
+    this.tourState.isActive = false;
 
-    this._cleanup()
-    Shepherd.trigger(completeOrCancel)
+    this._cleanup();
+    Shepherd.trigger(completeOrCancel);
   }
 
   /**
@@ -212,9 +209,9 @@ export class ShepherdTour extends Component {
    * @private
    */
   _bindMethods(methods) {
-    methods.map((method) => {
-      this[method] = this[method].bind(this)
-    })
+    methods.map(method => {
+      this[method] = this[method].bind(this);
+    });
   }
 
   /**
@@ -223,7 +220,7 @@ export class ShepherdTour extends Component {
    */
   _cleanup() {
     if (this.disableScroll) {
-      this.tourState.disableScroll.off(window)
+      this.tourState.disableScroll.off(window);
     }
   }
 
@@ -232,8 +229,8 @@ export class ShepherdTour extends Component {
       <ShepherdTourContext.Provider value={this.tourState}>
         {this.props.children}
       </ShepherdTourContext.Provider>
-    )
+    );
   }
 }
 
-export { ShepherdTourContextConsumer as TourMethods }
+export { ShepherdTourContextConsumer as TourMethods };
