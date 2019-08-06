@@ -84,14 +84,17 @@ export class ShepherdTour extends Component {
       const { id, options } = step;
 
       if (options.buttons) {
-        options.buttons = options.buttons.map(button => {
-          const { type, classes, text } = button;
-          return {
-            action: tour[type],
-            classes,
-            text
-          };
-        });
+        options.buttons = options.buttons.map(
+          button => {
+            const { type, classes, text } = button
+            return {
+              action: tour[type],
+              classes,
+              text,
+              type
+            }
+          }
+        );
       }
 
       tour.addStep(id, options);
