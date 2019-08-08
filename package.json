@@ -22,7 +22,7 @@
     "deploy": "gh-pages -d example/build"
   },
   "dependencies": {
-    "shepherd.js": "^4.3.0"
+    "shepherd.js": "^4.4.1"
   },
   "peerDependencies": {
     "prop-types": "^15.5.4",
