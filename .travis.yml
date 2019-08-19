@@ -43,7 +43,6 @@ jobs:
         - yarn test
       after_script:
         - greenkeeper-lockfile-upload
-        - yarn rewrite-paths
         - codeclimate-test-reporter < coverage/lcov.info
     - stage: npm release
       script:
