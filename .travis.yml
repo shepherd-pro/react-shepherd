@@ -5,15 +5,6 @@ node_js:
 sudo: false
 dist: trusty
 
-addons:
-  chrome: stable
-  code_climate:
-    repo_token:
-      secure: "Ilc67FyHl9y9v0e86T9+foBEhWapwwLfqH2T+sc9T8LeaXP+yaE6gf8RjvEALnmcYLWmF3/ZlJsAhpMBJV2I9CV48LPT8qUL7B3AM7EBeLk7GA5q0pEBU90eAW04vNWH9rMXRTaQ6t/me9UvpoFHNghC+Y+J8N/l6g4xF1qjiBA="
-
-cache:
-  yarn: true
-
 env:
   global:
     # See https://git.io/vdao3 for details.
@@ -21,6 +12,20 @@ env:
     - secure: K5sRZBHXcHoYfpYEul1tcK2hOp9QMV/T8xmfj1q20AKzw/+ovbsp+Pdb+PbKFr5vP4eN0ISAeHU3nseMGD9tW6BI/Jf1wW4r7qvGch9eH5v1fpAn7Xxm4AqxusxNck7j4uuo720J5nqioZPUjY5ynlgF0iuGJKjx3YVP7t8W4HQ=
     - secure: NbSFG5O6U/6gBMG42vNoRY7Vt0TrDCGunM6MAsTENoRSAN5JFJ1Ne5HfSmOV4hyT63rSTUbNT1zBmqHCfUpZFp+ynVTS3Fs6jv6qgZSZm6l3k5SW1ZGFbDUjxCWuX2lg6n6dV2LyLTnnONa/U/OAb4FkceW9MeKVNjPNv/uYdEA=
 
+addons:
+  chrome: stable
+  code_climate:
+    repo_token:
+      secure: "Ilc67FyHl9y9v0e86T9+foBEhWapwwLfqH2T+sc9T8LeaXP+yaE6gf8RjvEALnmcYLWmF3/ZlJsAhpMBJV2I9CV48LPT8qUL7B3AM7EBeLk7GA5q0pEBU90eAW04vNWH9rMXRTaQ6t/me9UvpoFHNghC+Y+J8N/l6g4xF1qjiBA="
+  
+branches:
+  only:
+    - master
+    - /^v\d+\.\d+(\.\d+)?(-\S*)?$/
+
+cache:
+  yarn: true
+  
 before_install:
   - yarn global add greenkeeper-lockfile@1
 
@@ -29,10 +34,9 @@ install:
 
 stages:
   - test
-  - name: npm release
-    if: (tag =~ ^v) AND (branch = master)
-  - name: gh-pages release
-    if: branch = master AND type != pull_request
+  - name: npm-release
+    if: (tag =~ ^v)
+  - gh-pages release  
 
 jobs:
   include:
