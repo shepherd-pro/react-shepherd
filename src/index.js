@@ -97,7 +97,7 @@ export class ShepherdTour extends Component {
         );
       }
 
-      tour.addStep(id, options);
+      tour.addStep(options);
 
       // Step up events for the current step
       const currentStep = tour.steps[index];
