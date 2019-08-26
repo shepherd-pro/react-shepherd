@@ -86,9 +86,9 @@ export class ShepherdTour extends Component {
       if (options.buttons) {
         options.buttons = options.buttons.map(
           button => {
-            const { type, classes, text } = button
+            const { type, classes, text, action } = button
             return {
-              action: tour[type],
+              action: action || tour[type],
               classes,
               text,
               type
