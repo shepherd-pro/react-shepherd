@@ -1,30 +1,33 @@
-import React, { Component } from 'react'
-import { Prism as SyntaxHighlighter } from 'react-syntax-highlighter'
-import { duotoneLight } from 'react-syntax-highlighter/dist/esm/styles/prism'
+import React, { Component } from 'react';
+import { Prism as SyntaxHighlighter } from 'react-syntax-highlighter';
+import { duotoneLight } from 'react-syntax-highlighter/dist/esm/styles/prism';
 
-const installString = 'yarn add react-shepherd'
+const installString = 'yarn add react-shepherd';
 const usageString = `
 import React, { Component } from 'react'
 import {ShepherdTour, TourMethods} from 'react-shepherd'
 import newSteps from './steps'
 
-const defaultStepOptions = { showCancelLink: true };
-const useModalOverlay = true;
+const tourOptions = {
+  defaultStepOptions: { showCancelLink: true },
+  useModalOverlay: true
+};
 
-export default class App extends Component {
+class App extends Component {
   render() {
     return (
       <div>
-        <ShepherdTour
-          defaultStepOptions={defaultStepOptions}
-          steps={newSteps}
-          useModalOverlay={useModalOverlay}
-        >
-          <div>Example Tour</div>
+        <ShepherdTour steps={newSteps} tourOptions={tourOptions}>
+          <TourMethods>
+            {(tourContext) => (
+              <button className="button dark" onClick={tourContext.start}>
+                Start Tour
+              </button>
+            )}
+          </TourMethods>
         </ShepherdTour>
       </div>
     );
-  }
 }
 `;
 
@@ -38,20 +41,18 @@ export default class HomePage extends Component {
             <div>
               <h5>Installation</h5>
               <SyntaxHighlighter
-                className='install-element'
+                className="install-element"
                 language="javascript"
-                style={duotoneLight}
-              >
+                style={duotoneLight}>
                 {installString}
               </SyntaxHighlighter>
             </div>
             <div>
               <h5>Usage</h5>
               <SyntaxHighlighter
-                className='usage-element'
+                className="usage-element"
                 language="javascript"
-                style={duotoneLight}
-              >
+                style={duotoneLight}>
                 {usageString}
               </SyntaxHighlighter>
             </div>
