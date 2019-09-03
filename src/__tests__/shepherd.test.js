@@ -1,6 +1,6 @@
 import React from 'react';
 import { render, fireEvent } from '@testing-library/react';
-import { ShepherdTour, TourMethods } from './';
+import { ShepherdTour, TourMethods } from '../';
 
 const steps = [
   {
