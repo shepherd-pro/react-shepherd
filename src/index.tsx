@@ -3,7 +3,7 @@ import Shepherd from 'shepherd.js';
 import Step from 'shepherd.js/src/types/step';
 import Tour from 'shepherd.js/src/types/tour';
 
-const ShepherdTourContext = React.createContext();
+const ShepherdTourContext = React.createContext({});
 const ShepherdTourContextConsumer = ShepherdTourContext.Consumer;
 
 /**
@@ -17,7 +17,7 @@ const addSteps = (steps: Array<Step> | Array<Step.StepOptions>, tour: Tour) => {
     return [];
   }
 
-  steps.forEach((step: any, index: number) => {
+  steps.forEach((step: any, index: number): Step => {
     const { buttons } = step;
 
     if (buttons) {
@@ -32,7 +32,7 @@ const addSteps = (steps: Array<Step> | Array<Step.StepOptions>, tour: Tour) => {
       });
     }
 
-    tour.addStep(step);
+    return tour.addStep(step);
   });
 }
 
