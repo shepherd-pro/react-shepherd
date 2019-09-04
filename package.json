@@ -22,7 +22,12 @@
     "deploy": "gh-pages -d example/build"
   },
   "dependencies": {
-    "shepherd.js": "^5.0.0"
+    "@types/jest": "^24.0.18",
+    "@types/node": "^12.7.4",
+    "@types/react": "^16.9.2",
+    "@types/react-dom": "^16.9.0",
+    "shepherd.js": "^5.0.0",
+    "typescript": "^3.6.2"
   },
   "peerDependencies": {
     "prop-types": "^15.5.4",
@@ -72,7 +77,9 @@
     "rollup-plugin-node-resolve": "^5.2.0",
     "rollup-plugin-peer-deps-external": "^2.2.0",
     "rollup-plugin-postcss": "^2.0.3",
-    "rollup-plugin-url": "^2.2.2"
+    "rollup-plugin-typescript": "^1.0.1",
+    "rollup-plugin-url": "^2.2.2",
+    "tslib": "^1.10.0"
   },
   "files": [
     "dist"
