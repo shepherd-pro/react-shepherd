@@ -5,7 +5,7 @@
     <img align="left" src="http://i.imgur.com/DWHQjA5.png" alt="Ship Shape" width="50" height="50"/>
   </a>
 
-  **[react-shepherd is built and maintained by Ship Shape maintained by Ship Shape. Contact us for web app consulting, development, and training for your project](https://shipshape.io/)**.
+  **[react-shepherd is built and maintained by Ship Shape. Contact us for web app consulting, development, and training for your project](https://shipshape.io/)**.
 </div>
 
 [![NPM](https://img.shields.io/npm/v/react-shepherd.svg)](https://www.npmjs.com/package/react-shepherd)
