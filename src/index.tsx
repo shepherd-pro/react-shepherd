@@ -3,6 +3,16 @@ import Shepherd from 'shepherd.js';
 import Step from 'shepherd.js/src/types/step';
 import Tour from 'shepherd.js/src/types/tour';
 
+
+interface ShepherdProps {
+  steps: Array<Step>,
+  tourOptions: Tour.TourOptions
+}
+
+interface ShepherdStepWithType extends Step.StepOptionsButton {
+  type?: string
+}
+
 const ShepherdTourContext = React.createContext({});
 const ShepherdTourContextConsumer = ShepherdTourContext.Consumer;
 
@@ -21,7 +31,7 @@ const addSteps = (steps: Array<Step> | Array<Step.StepOptions>, tour: Tour) => {
     const { buttons } = step;
 
     if (buttons) {
-      step.buttons = buttons.map(button => {
+      step.buttons = buttons.map((button: ShepherdStepWithType) => {
         const { type, classes, text, action } = button;
         return {
           action: action || tour[type],
@@ -34,11 +44,6 @@ const addSteps = (steps: Array<Step> | Array<Step.StepOptions>, tour: Tour) => {
 
     return tour.addStep(step);
   });
-}
-
-interface ShepherdProps {
-  steps: Array<Step>,
-  tourOptions: object
 }
 
 export const ShepherdTour: FunctionComponent<ShepherdProps> = (props) => {
@@ -54,4 +59,4 @@ export const ShepherdTour: FunctionComponent<ShepherdProps> = (props) => {
   );
 };
 
-export { ShepherdTourContextConsumer as TourMethods };
+export { ShepherdTourContextConsumer as TourMethods, ShepherdTourContext };
