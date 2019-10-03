@@ -4236,9 +4236,9 @@ eslint-config-standard-jsx@^8.0.0:
   integrity sha512-ULVC8qH8qCqbU792ZOO6DaiaZyHNS/5CZt3hKqHkEhVlhPEPN3nfBqqxJCyp59XrjIBZPu1chMYe9T2DXZ7TMw==
 
 eslint-config-standard-react@^9.0.0:
-  version "9.1.0"
-  resolved "https://registry.yarnpkg.com/eslint-config-standard-react/-/eslint-config-standard-react-9.1.0.tgz#6f08368db869064548846a851c3d6d72391268f9"
-  integrity sha512-CCJcGPtpGv29+ntl8OMc3I77Z36xZLIFopXR18i8omAVZko5MSruEXreGzGlnzbvPI5dCMCwt5xGN5djUqoGWw==
+  version "9.2.0"
+  resolved "https://registry.yarnpkg.com/eslint-config-standard-react/-/eslint-config-standard-react-9.2.0.tgz#b21f05c087c1b0cfeea9fa3bff3cf42bd08a68a9"
+  integrity sha512-u+KRP2uCtthZ/W4DlLWCC59GZNV/y9k9yicWWammgTs/Omh8ZUUPF3EnYm81MAcbkYQq2Wg0oxutAhi/FQ8mIw==
   dependencies:
     eslint-config-standard-jsx "^8.0.0"
 
