@@ -1,5 +1,5 @@
-import React, { Component } from 'react';
-import { ShepherdTour, TourMethods } from 'react-shepherd';
+import React, { Component, useContext } from 'react';
+import { ShepherdTour, ShepherdTourContext } from 'react-shepherd';
 import HomePage from './home';
 import newSteps from './steps';
 
@@ -21,16 +21,14 @@ export default class App extends Component {
 }
 
 function Content() {
+  const tour = useContext(ShepherdTourContext);
+
   return (
     <div>
       <HomePage>
-        <TourMethods>
-          {context => (
-            <button className="button dark" onClick={context.start}>
-              Start Tour
-            </button>
-          )}
-        </TourMethods>
+        <button className="button dark" onClick={tour.start}>
+          Start Tour
+        </button>
       </HomePage>
     </div>
   );

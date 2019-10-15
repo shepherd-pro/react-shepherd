@@ -5,7 +5,7 @@ import { duotoneLight } from 'react-syntax-highlighter/dist/esm/styles/prism';
 const installString = 'yarn add react-shepherd';
 const usageString = `
 import React, { Component } from 'react'
-import {ShepherdTour, TourMethods} from 'react-shepherd'
+import {ShepherdTour, ShepherdTourContext} from 'react-shepherd'
 import newSteps from './steps'
 
 const tourOptions = {
@@ -13,18 +13,22 @@ const tourOptions = {
   useModalOverlay: true
 };
 
+function Button() {
+  const tour = useContext(ShepherdTourContext);
+
+  return (
+    <button className="button dark" onClick={tour.start}>
+      Start Tour
+    </button>
+  );
+}
+
 class App extends Component {
   render() {
     return (
       <div>
         <ShepherdTour steps={newSteps} tourOptions={tourOptions}>
-          <TourMethods>
-            {(tourContext) => (
-              <button className="button dark" onClick={tourContext.start}>
-                Start Tour
-              </button>
-            )}
-          </TourMethods>
+          <Button />
         </ShepherdTour>
       </div>
     );
