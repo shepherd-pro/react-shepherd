@@ -22,7 +22,7 @@
     "deploy": "gh-pages -d example/build"
   },
   "dependencies": {
-    "shepherd.js": "^5.0.0"
+    "shepherd.js": "^6.0.0"
   },
   "peerDependencies": {
     "react": "^15.0.0 || ^16.0.0",

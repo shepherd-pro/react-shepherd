@@ -2,6 +2,7 @@ import React, { Component, useContext } from 'react';
 import { ShepherdTour, ShepherdTourContext } from 'react-shepherd';
 import HomePage from './home';
 import newSteps from './steps';
+import 'shepherd.js/dist/css/shepherd.css';
 
 const tourOptions = {
   defaultStepOptions: { showCancelLink: true },
