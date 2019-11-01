@@ -3,14 +3,17 @@ export default [
     id: 'welcome',
     text: [
       `
+      <p>
       Shepherd is a JavaScript library for guiding users through your app.
-      It uses <a href="https://atomiks.github.io/tippyjs//">Tippy.js</a>,
+      It uses <a href="http://tether.io/">Tether</a>,
       another open source library, to render dialogs for each tour "step".
-    `,
+      </p>
+
+      <p>
+      Among many things, Tether makes sure your steps never end up off screen or
+      cropped by an overflow. (Try resizing your browser to see what we mean.)
+      </p>
       `
-      Among many things, Tippy makes sure your steps never end up off screen or cropped by an overflow.
-      Try resizing your browser to see what we mean.
-    `
     ],
     attachTo: { element: '.hero-welcome', on: 'bottom' },
     classes: 'shepherd shepherd-welcome',
@@ -30,7 +33,7 @@ export default [
     id: 'installation',
     title: 'Installation',
     text:
-      'Installation is simple, if you are using npm, just install like any other package.',
+      'Installation is simple, if you are using npm or yarn, just install like any other package.',
     attachTo: { element: '.install-element', on: 'bottom' },
     buttons: [
       {
@@ -82,8 +85,12 @@ export default [
     ],
     classes: 'custom-class-name-1 custom-class-name-2',
     text: [
-      'We implemented true modal functionality by disabling clicking of the rest of the page.',
-      "If you would like to enable modal, simply do this.get('tour').set('modal', true)."
+      `<p>
+        We implemented true modal functionality by disabling clicking of the rest of the page.
+      </p>
+      <p>
+        If you would like to enable modal, simply add <code>useModalOverlay: true</code> to your tourOptions object.
+      </p>`
     ]
   },
   {
