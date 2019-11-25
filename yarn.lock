@@ -98,7 +98,7 @@
     "@babel/traverse" "^7.4.4"
     "@babel/types" "^7.4.4"
 
-"@babel/helper-create-class-features-plugin@^7.5.5", "@babel/helper-create-class-features-plugin@^7.6.0", "@babel/helper-create-class-features-plugin@^7.7.0", "@babel/helper-create-class-features-plugin@^7.7.4":
+"@babel/helper-create-class-features-plugin@^7.5.5", "@babel/helper-create-class-features-plugin@^7.6.0", "@babel/helper-create-class-features-plugin@^7.7.4":
   version "7.7.4"
   resolved "https://registry.yarnpkg.com/@babel/helper-create-class-features-plugin/-/helper-create-class-features-plugin-7.7.4.tgz#fce60939fd50618610942320a8d951b3b639da2d"
   integrity sha512-l+OnKACG4uiDHQ/aJT8dwpR+LhCJALxL0mJ6nzjB25e5IPwqV1VOsY7ah6UB1DG+VOXAIMtuC54rFJGiHkxjgA==
@@ -426,13 +426,13 @@
     "@babel/plugin-syntax-decorators" "^7.2.0"
 
 "@babel/plugin-proposal-decorators@^7.4.4":
-  version "7.7.0"
-  resolved "https://registry.yarnpkg.com/@babel/plugin-proposal-decorators/-/plugin-proposal-decorators-7.7.0.tgz#d386a45730a4eb8c03e23a80b6d3dbefd761c9c9"
-  integrity sha512-dMCDKmbYFQQTn1+VJjl5hbqlweuHl5oDeMU9B1Q7oAWi0mHxjQQDHdJIK6iW76NE1KJT3zA6dDU3weR1WT5D4A==
+  version "7.7.4"
+  resolved "https://registry.yarnpkg.com/@babel/plugin-proposal-decorators/-/plugin-proposal-decorators-7.7.4.tgz#58c1e21d21ea12f9f5f0a757e46e687b94a7ab2b"
+  integrity sha512-GftcVDcLCwVdzKmwOBDjATd548+IE+mBo7ttgatqNDR7VG7GqIuZPtRWlMLHbhTXhcnFZiGER8iIYl1n/imtsg==
   dependencies:
-    "@babel/helper-create-class-features-plugin" "^7.7.0"
+    "@babel/helper-create-class-features-plugin" "^7.7.4"
     "@babel/helper-plugin-utils" "^7.0.0"
-    "@babel/plugin-syntax-decorators" "^7.2.0"
+    "@babel/plugin-syntax-decorators" "^7.7.4"
 
 "@babel/plugin-proposal-do-expressions@^7.5.0":
   version "7.6.0"
@@ -578,10 +578,10 @@
   dependencies:
     "@babel/helper-plugin-utils" "^7.0.0"
 
-"@babel/plugin-syntax-decorators@^7.2.0":
-  version "7.2.0"
-  resolved "https://registry.yarnpkg.com/@babel/plugin-syntax-decorators/-/plugin-syntax-decorators-7.2.0.tgz#c50b1b957dcc69e4b1127b65e1c33eef61570c1b"
-  integrity sha512-38QdqVoXdHUQfTpZo3rQwqQdWtCn5tMv4uV6r2RMfTqNBuv4ZBhz79SfaQWKTVmxHjeFv/DnXVC/+agHCklYWA==
+"@babel/plugin-syntax-decorators@^7.2.0", "@babel/plugin-syntax-decorators@^7.7.4":
+  version "7.7.4"
+  resolved "https://registry.yarnpkg.com/@babel/plugin-syntax-decorators/-/plugin-syntax-decorators-7.7.4.tgz#3c91cfee2a111663ff3ac21b851140f5a52a4e0b"
+  integrity sha512-0oNLWNH4k5ZbBVfAwiTU53rKFWIeTh6ZlaWOXWJc4ywxs0tjz5fc3uZ6jKAnZSxN98eXVgg7bJIuzjX+3SXY+A==
   dependencies:
     "@babel/helper-plugin-utils" "^7.0.0"
 
