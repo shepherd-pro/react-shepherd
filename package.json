@@ -7,6 +7,7 @@
   "main": "dist/Shepherd.js",
   "module": "dist/Shepherd.es.js",
   "jsnext:main": "dist/Shepherd.es.js",
+  "types": "dist/index.d.ts",
   "homepage": "https://shipshapecode.github.io/react-shepherd/",
   "engines": {
     "node": ">=8",
@@ -15,6 +16,7 @@
   "scripts": {
     "test": "cross-env CI=1 react-scripts test",
     "test:watch": "react-scripts test",
+    "prebuild": "tsc --project ./tsconfig-declarations.json",
     "build": "rollup -c",
     "start": "rollup -c -w",
     "prepare": "yarn run build",
