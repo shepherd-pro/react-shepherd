@@ -28,27 +28,31 @@ npm install --save react-shepherd
 ## Usage
 
 ```jsx
-import React, { Component } from 'react';
-import { ShepherdTour, TourMethods } from 'react-shepherd';
-import steps from './steps';
+import React, { Component } from 'react'
+import {ShepherdTour, ShepherdTourContext} from 'react-shepherd'
+import newSteps from './steps'
 
 const tourOptions = {
   defaultStepOptions: { showCancelLink: true },
   useModalOverlay: true
 };
 
+function Button() {
+  const tour = useContext(ShepherdTourContext);
+
+  return (
+    <button className="button dark" onClick={tour.start}>
+      Start Tour
+    </button>
+  );
+}
+
 class App extends Component {
   render() {
     return (
       <div>
-        <ShepherdTour steps={steps} tourOptions={tourOptions}>
-          <TourMethods>
-            {(tourContext) => (
-              <button className="button dark" onClick={tourContext.start}>
-                Start Tour
-              </button>
-            )}
-          </TourMethods>
+        <ShepherdTour steps={newSteps} tourOptions={tourOptions}>
+          <Button />
         </ShepherdTour>
       </div>
     );
