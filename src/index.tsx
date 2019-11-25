@@ -34,7 +34,9 @@ const addSteps = (steps: Array<Step> | Array<Step.StepOptions>, tour: Tour) => {
       step.buttons = buttons.map((button: ShepherdStepWithType) => {
         const { type, classes, text, action } = button;
         return {
-          action: action || tour[type],
+          // TypeScript doesn't have great support for dynamic method calls with
+          // bracket notation, so we use the `any` escape hatch
+          action: action || (tour as any)[type!],
           classes,
           text,
           type
