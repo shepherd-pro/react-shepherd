@@ -378,15 +378,7 @@
     "@babel/helper-plugin-utils" "^7.0.0"
     "@babel/plugin-syntax-nullish-coalescing-operator" "^7.7.4"
 
-"@babel/plugin-proposal-numeric-separator@7.7.4":
-  version "7.7.4"
-  resolved "https://registry.yarnpkg.com/@babel/plugin-proposal-numeric-separator/-/plugin-proposal-numeric-separator-7.7.4.tgz#7819a17445f4197bb9575e5750ed349776da858a"
-  integrity sha512-CG605v7lLpVgVldSY6kxsN9ui1DxFOyepBfuX2AzU2TNriMAYApoU55mrGw9Jr4TlrTzPCG10CL8YXyi+E/iPw==
-  dependencies:
-    "@babel/helper-plugin-utils" "^7.0.0"
-    "@babel/plugin-syntax-numeric-separator" "^7.7.4"
-
-"@babel/plugin-proposal-numeric-separator@^7.2.0":
+"@babel/plugin-proposal-numeric-separator@7.7.4", "@babel/plugin-proposal-numeric-separator@^7.2.0":
   version "7.7.4"
   resolved "https://registry.yarnpkg.com/@babel/plugin-proposal-numeric-separator/-/plugin-proposal-numeric-separator-7.7.4.tgz#7819a17445f4197bb9575e5750ed349776da858a"
   integrity sha512-CG605v7lLpVgVldSY6kxsN9ui1DxFOyepBfuX2AzU2TNriMAYApoU55mrGw9Jr4TlrTzPCG10CL8YXyi+E/iPw==
@@ -545,13 +537,6 @@
   version "7.7.4"
   resolved "https://registry.yarnpkg.com/@babel/plugin-syntax-nullish-coalescing-operator/-/plugin-syntax-nullish-coalescing-operator-7.7.4.tgz#e53b751d0c3061b1ba3089242524b65a7a9da12b"
   integrity sha512-XKh/yIRPiQTOeBg0QJjEus5qiSKucKAiApNtO1psqG7D17xmE+X2i5ZqBEuSvo0HRuyPaKaSN/Gy+Ha9KFQolw==
-  dependencies:
-    "@babel/helper-plugin-utils" "^7.0.0"
-
-"@babel/plugin-syntax-numeric-separator@^7.7.4":
-  version "7.7.4"
-  resolved "https://registry.yarnpkg.com/@babel/plugin-syntax-numeric-separator/-/plugin-syntax-numeric-separator-7.7.4.tgz#39818f8042a09d4c6248d85d82555369da4da5c4"
-  integrity sha512-vmlUUBlLuFnbpaR+1kKIdo62xQEN+THWbtAHSEilo+0rHl2dKKCn6GLUVKpI848wL/T0ZPQgAy8asRJ9yYEjog==
   dependencies:
     "@babel/helper-plugin-utils" "^7.0.0"
 
@@ -1100,7 +1085,7 @@
     globals "^11.1.0"
     lodash "^4.17.13"
 
-"@babel/types@^7.0.0", "@babel/types@^7.3.0", "@babel/types@^7.4.0", "@babel/types@^7.4.4", "@babel/types@^7.7.0", "@babel/types@^7.7.4":
+"@babel/types@^7.0.0", "@babel/types@^7.3.0", "@babel/types@^7.4.0", "@babel/types@^7.4.4", "@babel/types@^7.7.4":
   version "7.7.4"
   resolved "https://registry.yarnpkg.com/@babel/types/-/types-7.7.4.tgz#516570d539e44ddf308c07569c258ff94fde9193"
   integrity sha512-cz5Ji23KCi4T+YIE/BolWosrJuSmoZeN1EFnRtBwF+KKLi8GG/Z2c2hOJJeCXPk4mwk4QFvTmwIodJowXgttRA==
@@ -10954,9 +10939,9 @@ typedarray@^0.0.6:
   integrity sha1-hnrHTjhkGHsdPUfZlqeOxciDB3c=
 
 typescript@^3.6.2:
-  version "3.7.2"
-  resolved "https://registry.yarnpkg.com/typescript/-/typescript-3.7.2.tgz#27e489b95fa5909445e9fef5ee48d81697ad18fb"
-  integrity sha512-ml7V7JfiN2Xwvcer+XAf2csGO1bPBdRbFCkYBczNZggrBZ9c7G3riSUeJmqEU5uOtXNPMhE3n+R4FA/3YOAWOQ==
+  version "3.7.3"
+  resolved "https://registry.yarnpkg.com/typescript/-/typescript-3.7.3.tgz#b36840668a16458a7025b9eabfad11b66ab85c69"
+  integrity sha512-Mcr/Qk7hXqFBXMN7p7Lusj1ktCBydylfQM/FZCk5glCNQJrCUKPkMHdo9R0MTFWsC/4kPFvDS0fDPvukfCkFsw==
 
 uglify-js@3.4.x:
   version "3.4.10"
