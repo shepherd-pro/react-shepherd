@@ -9,7 +9,11 @@ import {ShepherdTour, ShepherdTourContext} from 'react-shepherd'
 import newSteps from './steps'
 
 const tourOptions = {
-  defaultStepOptions: { showCancelLink: true },
+  defaultStepOptions: {
+    cancelIcon: {
+      enabled: true
+    }
+  },
   useModalOverlay: true
 };
 
@@ -47,7 +51,8 @@ export default class HomePage extends Component {
               <SyntaxHighlighter
                 className="install-element"
                 language="javascript"
-                style={duotoneLight}>
+                style={duotoneLight}
+              >
                 {installString}
               </SyntaxHighlighter>
             </div>
@@ -56,7 +61,8 @@ export default class HomePage extends Component {
               <SyntaxHighlighter
                 className="usage-element"
                 language="javascript"
-                style={duotoneLight}>
+                style={duotoneLight}
+              >
                 {usageString}
               </SyntaxHighlighter>
             </div>

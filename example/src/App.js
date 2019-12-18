@@ -5,7 +5,11 @@ import newSteps from './steps';
 import 'shepherd.js/dist/css/shepherd.css';
 
 const tourOptions = {
-  defaultStepOptions: { showCancelLink: true },
+  defaultStepOptions: {
+    cancelIcon: {
+      enabled: true
+    }
+  },
   useModalOverlay: true
 };
 
