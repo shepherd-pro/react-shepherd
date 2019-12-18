@@ -3,24 +3,23 @@ import Shepherd from 'shepherd.js';
 import Step from 'shepherd.js/src/types/step';
 import Tour from 'shepherd.js/src/types/tour';
 
-
 interface ShepherdProps {
-  steps: Array<Step>,
-  tourOptions: Tour.TourOptions
+  steps: Array<Step>;
+  tourOptions: Tour.TourOptions;
 }
 
 interface ShepherdStepWithType extends Step.StepOptionsButton {
-  type?: string
+  type?: string;
 }
 
 const ShepherdTourContext = React.createContext({});
 const ShepherdTourContextConsumer = ShepherdTourContext.Consumer;
 
 /**
-   * Take a set of steps and formats to use actions on the buttons in the current context
-   * @param {Array} steps
-   * @private
-   */
+ * Take a set of steps and formats to use actions on the buttons in the current context
+ * @param {Array} steps
+ * @private
+ */
 const addSteps = (steps: Array<Step> | Array<Step.StepOptions>, tour: Tour) => {
   // Return nothing if there are no steps
   if (!steps.length) {
@@ -46,9 +45,9 @@ const addSteps = (steps: Array<Step> | Array<Step.StepOptions>, tour: Tour) => {
 
     return tour.addStep(step);
   });
-}
+};
 
-export const ShepherdTour: FunctionComponent<ShepherdProps> = (props) => {
+export const ShepherdTour: FunctionComponent<ShepherdProps> = props => {
   const { tourOptions, steps } = props;
   const tourObject = new Shepherd.Tour(tourOptions);
 

@@ -5,7 +5,8 @@
     <img align="left" src="http://i.imgur.com/DWHQjA5.png" alt="Ship Shape" width="50" height="50"/>
   </a>
 
-  **[react-shepherd is built and maintained by Ship Shape. Contact us for web app consulting, development, and training for your project](https://shipshape.io/)**.
+**[react-shepherd is built and maintained by Ship Shape. Contact us for web app consulting, development, and training for your project](https://shipshape.io/)**.
+
 </div>
 
 [![NPM](https://img.shields.io/npm/v/react-shepherd.svg)](https://www.npmjs.com/package/react-shepherd)
@@ -33,7 +34,11 @@ import {ShepherdTour, ShepherdTourContext} from 'react-shepherd'
 import newSteps from './steps'
 
 const tourOptions = {
-  defaultStepOptions: { showCancelLink: true },
+  defaultStepOptions: {
+    cancelIcon: {
+      enabled: true
+    }
+  },
   useModalOverlay: true
 };
 
@@ -65,10 +70,12 @@ The following configuration options for a tour can be set on the ShepherdTour to
 **The only required option is `steps`, which is an array passed to the props.**
 
 ### tourOptions
+
 `PropTypes.object`
 Used to set the options that will be applied to each step by default. You can pass in any of the options that you can with Shepherd.
 
 ### steps
+
 `PropTypes.array`
 You must pass an array of steps to `steps`, something like this:
 
