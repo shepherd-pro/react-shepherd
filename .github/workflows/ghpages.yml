@@ -15,17 +15,14 @@ jobs:
 
     steps:
     - uses: actions/checkout@v1
-    - uses: borales/actions-yarn@v2.0.0
-      working-directory: ./example
-      with:
-       cmd: install
     - name: Use Node.js ${{ matrix.node-version }}
       uses: actions/setup-node@v1
       with:
         node-version: ${{ matrix.node-version }}
-      working-directory: ./example
     - run: |
-        npm run build
+        yarn install
+        yarn build
+      working-directory: ./example
     - name: GitHub Pages
       if: success()
       uses: crazy-max/ghaction-github-pages@v1.2.5
