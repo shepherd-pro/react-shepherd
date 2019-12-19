@@ -70,7 +70,7 @@
     "react": "^16.8.6",
     "react-dom": "^16.8.6",
     "react-scripts": "^3.1.0",
-    "react-syntax-highlighter": "^11.0.1",
+    "react-syntax-highlighter": "^12.2.1",
     "rollup": "^1.19.4",
     "rollup-plugin-babel": "^4.3.3",
     "rollup-plugin-commonjs": "^10.0.1",
