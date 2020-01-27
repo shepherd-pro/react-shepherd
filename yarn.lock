@@ -592,12 +592,12 @@
     "@babel/plugin-syntax-optional-chaining" "^7.7.4"
 
 "@babel/plugin-proposal-pipeline-operator@^7.5.0":
-  version "7.7.7"
-  resolved "https://registry.yarnpkg.com/@babel/plugin-proposal-pipeline-operator/-/plugin-proposal-pipeline-operator-7.7.7.tgz#d85c3c90924db3c4876cdf5a6290f1977d66cd5a"
-  integrity sha512-QJA76bpU+MF8+fygZN7qaKDmMg6KwMzdMfp01i0XT2R7qt4g2xRVSYF01XyX8p4wYIN6ch+mZsi1ZOYa9lI/Dg==
+  version "7.8.3"
+  resolved "https://registry.yarnpkg.com/@babel/plugin-proposal-pipeline-operator/-/plugin-proposal-pipeline-operator-7.8.3.tgz#c3569228e7466f91bfff7f1c1ae18fb5d36b3097"
+  integrity sha512-Z0qV3aUYoLUAnVLdfLTlz/GJYfcrbX7Mhrp897Twik29wQseAFAAXQ4TPvN1oswVBHdN74sLPIn9HVfTXtjuQA==
   dependencies:
-    "@babel/helper-plugin-utils" "^7.0.0"
-    "@babel/plugin-syntax-pipeline-operator" "^7.7.7"
+    "@babel/helper-plugin-utils" "^7.8.3"
+    "@babel/plugin-syntax-pipeline-operator" "^7.8.3"
 
 "@babel/plugin-proposal-throw-expressions@^7.2.0":
   version "7.8.3"
@@ -741,12 +741,12 @@
   dependencies:
     "@babel/helper-plugin-utils" "^7.0.0"
 
-"@babel/plugin-syntax-pipeline-operator@^7.7.7":
-  version "7.7.7"
-  resolved "https://registry.yarnpkg.com/@babel/plugin-syntax-pipeline-operator/-/plugin-syntax-pipeline-operator-7.7.7.tgz#90e9bb01d9157db8019a3e2021ee6eefe52e96d1"
-  integrity sha512-yZ5XNFphdeAelOqH5A/f3EuUTusWkNev3h6XuxYx7CY0pALlncM6tsvBBbYvFNoR4rDuYVX/+Ut44fTW+/WZQg==
+"@babel/plugin-syntax-pipeline-operator@^7.8.3":
+  version "7.8.3"
+  resolved "https://registry.yarnpkg.com/@babel/plugin-syntax-pipeline-operator/-/plugin-syntax-pipeline-operator-7.8.3.tgz#945d9f13958408e2b1048f6ebe03f370d390aaca"
+  integrity sha512-GhiBvlXZLWeP+MjKaEv33KmiR/QMCv4iCwz1AuuAp7pHxBvOxxyQmIPukh+N/py6PRLYG10bvRCNeenG34QbDA==
   dependencies:
-    "@babel/helper-plugin-utils" "^7.0.0"
+    "@babel/helper-plugin-utils" "^7.8.3"
 
 "@babel/plugin-syntax-throw-expressions@^7.8.3":
   version "7.8.3"
