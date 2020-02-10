@@ -417,12 +417,12 @@
     "@babel/plugin-syntax-json-strings" "^7.8.0"
 
 "@babel/plugin-proposal-logical-assignment-operators@^7.2.0":
-  version "7.7.4"
-  resolved "https://registry.yarnpkg.com/@babel/plugin-proposal-logical-assignment-operators/-/plugin-proposal-logical-assignment-operators-7.7.4.tgz#e972f5d4b446d9a139b299ad275f032710ef783e"
-  integrity sha512-vOHiM06HgN6IUm7cmqvhqnhCmkkVUeFTAP0GWhgTl36+0/r65TG7Bkp21rviL+tWqRKlx4DWr090cwaW8ZU5TA==
+  version "7.8.3"
+  resolved "https://registry.yarnpkg.com/@babel/plugin-proposal-logical-assignment-operators/-/plugin-proposal-logical-assignment-operators-7.8.3.tgz#e94810d96cb76f20524e66ba617171c21f3c0124"
+  integrity sha512-TLPLojGZYBeeoesO2NQIMLUJKD9N5oJlxG6iHLx7l7EvNQP5DfzeyxdI2lMPo5I7ih4Jv/vxrlwIPf6aJw422Q==
   dependencies:
-    "@babel/helper-plugin-utils" "^7.0.0"
-    "@babel/plugin-syntax-logical-assignment-operators" "^7.7.4"
+    "@babel/helper-plugin-utils" "^7.8.3"
+    "@babel/plugin-syntax-logical-assignment-operators" "^7.8.3"
 
 "@babel/plugin-proposal-nullish-coalescing-operator@7.7.4":
   version "7.7.4"
@@ -611,12 +611,12 @@
   dependencies:
     "@babel/helper-plugin-utils" "^7.8.3"
 
-"@babel/plugin-syntax-logical-assignment-operators@^7.7.4":
-  version "7.7.4"
-  resolved "https://registry.yarnpkg.com/@babel/plugin-syntax-logical-assignment-operators/-/plugin-syntax-logical-assignment-operators-7.7.4.tgz#630f17d39b2efccbd7ddebb3844e389d606d884d"
-  integrity sha512-gNtCBpD7ENcpBz8v/ijzs2XsMrw+1eruYvg4/NVIohhDmL/qS1dIs22pcbKe0+DQWoKFuC0rVWo03VFjueafsQ==
+"@babel/plugin-syntax-logical-assignment-operators@^7.8.3":
+  version "7.8.3"
+  resolved "https://registry.yarnpkg.com/@babel/plugin-syntax-logical-assignment-operators/-/plugin-syntax-logical-assignment-operators-7.8.3.tgz#3995d7d7ffff432f6ddc742b47e730c054599897"
+  integrity sha512-Zpg2Sgc++37kuFl6ppq2Q7Awc6E6AIW671x5PY8E/f7MCIyPPGK/EoeZXvvY3P42exZ3Q4/t3YOzP/HiN79jDg==
   dependencies:
-    "@babel/helper-plugin-utils" "^7.0.0"
+    "@babel/helper-plugin-utils" "^7.8.3"
 
 "@babel/plugin-syntax-nullish-coalescing-operator@^7.7.4", "@babel/plugin-syntax-nullish-coalescing-operator@^7.8.0":
   version "7.8.0"
