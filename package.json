@@ -24,7 +24,7 @@
     "deploy": "gh-pages -d example/build"
   },
   "dependencies": {
-    "shepherd.js": "^6.0.0"
+    "shepherd.js": "^7.0.1"
   },
   "peerDependencies": {
     "react": "^15.0.0 || ^16.0.0",
@@ -84,5 +84,9 @@
   },
   "files": [
     "dist"
-  ]
+  ],
+  "volta": {
+    "node": "10.16.3",
+    "yarn": "1.22.0"
+  }
 }
