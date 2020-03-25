@@ -1,4 +1,4 @@
-import React, { FunctionComponent } from 'react';
+import React, { FunctionComponent, useMemo } from 'react';
 import Shepherd from 'shepherd.js';
 import Step from 'shepherd.js/src/types/step';
 import Tour from 'shepherd.js/src/types/tour';
@@ -49,9 +49,13 @@ const addSteps = (steps: Array<Step> | Array<Step.StepOptions>, tour: Tour) => {
 
 export const ShepherdTour: FunctionComponent<ShepherdProps> = props => {
   const { tourOptions, steps } = props;
-  const tourObject = new Shepherd.Tour(tourOptions);
+  const tourObject = useMemo(() => {
+    const tourObject = new Shepherd.Tour(tourOptions);
 
-  addSteps(steps, tourObject);
+    addSteps(steps, tourObject);
+
+    return tourObject;
+  }, [tourOptions, steps]);
 
   return (
     <ShepherdTourContext.Provider value={tourObject}>
