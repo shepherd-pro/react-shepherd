@@ -14,13 +14,13 @@
     "npm": ">=5"
   },
   "scripts": {
+    "prepare": "install-peers",
     "test": "cross-env CI=1 react-scripts test",
     "test:watch": "react-scripts test",
     "prebuild": "tsc --project ./tsconfig-declarations.json",
     "build": "rollup -c",
     "problems": "tsc --noEmit",
     "start": "rollup -c -w",
-    "prepare": "yarn run build",
     "predeploy": "cd example && yarn install && yarn run build",
     "deploy": "gh-pages -d example/build"
   },
@@ -28,8 +28,8 @@
     "shepherd.js": "^7.0.1"
   },
   "peerDependencies": {
-    "react": "^15.0.0 || ^16.0.0",
-    "react-dom": "^15.0.0 || ^16.0.0"
+    "react": "^16.8.0",
+    "react-dom": "^16.8.0"
   },
   "devDependencies": {
     "@babel/core": "^7.5.4",
@@ -68,8 +68,7 @@
     "eslint-plugin-react": "^7.14.2",
     "eslint-plugin-standard": "^4.0.0",
     "gh-pages": "^2.0.1",
-    "react": "^16.8.6",
-    "react-dom": "^16.8.6",
+    "install-peers-cli": "^2.2.0",
     "react-scripts": "^3.1.0",
     "react-syntax-highlighter": "^12.2.1",
     "rollup": "^1.19.4",
