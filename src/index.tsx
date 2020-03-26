@@ -12,7 +12,7 @@ interface ShepherdStepWithType extends Step.StepOptionsButton {
   type?: string;
 }
 
-const ShepherdTourContext = React.createContext(Tour);
+const ShepherdTourContext = React.createContext<Tour | null>(null);
 const ShepherdTourContextConsumer = ShepherdTourContext.Consumer;
 
 /**
