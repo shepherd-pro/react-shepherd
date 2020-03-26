@@ -18,6 +18,7 @@
     "test:watch": "react-scripts test",
     "prebuild": "tsc --project ./tsconfig-declarations.json",
     "build": "rollup -c",
+    "problems": "tsc --noEmit",
     "start": "rollup -c -w",
     "prepare": "yarn run build",
     "predeploy": "cd example && yarn install && yarn run build",

@@ -4,7 +4,7 @@ import Step from 'shepherd.js/src/types/step';
 import Tour from 'shepherd.js/src/types/tour';
 
 interface ShepherdProps {
-  steps: Array<Step>;
+  steps: Array<Step.StepOptions>;
   tourOptions: Tour.TourOptions;
 }
 
@@ -12,7 +12,7 @@ interface ShepherdStepWithType extends Step.StepOptionsButton {
   type?: string;
 }
 
-const ShepherdTourContext = React.createContext({});
+const ShepherdTourContext = React.createContext(Tour);
 const ShepherdTourContextConsumer = ShepherdTourContext.Consumer;
 
 /**
