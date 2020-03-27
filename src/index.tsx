@@ -3,34 +3,39 @@ import Shepherd from 'shepherd.js';
 import Step from 'shepherd.js/src/types/step';
 import Tour from 'shepherd.js/src/types/tour';
 
-interface ShepherdProps {
-  steps: Array<Step>;
-  tourOptions: Tour.TourOptions;
-}
-
-interface ShepherdStepWithType extends Step.StepOptionsButton {
+interface ShepherdButtonWithType extends Step.StepOptionsButton {
   type?: string;
 }
 
-const ShepherdTourContext = React.createContext({});
+interface ShepherdOptionsWithType extends Step.StepOptions {
+  buttons?: ReadonlyArray<Step.StepOptionsButton | ShepherdButtonWithType>;
+}
+
+interface ShepherdProps {
+  steps: Array<ShepherdOptionsWithType>;
+  tourOptions: Tour.TourOptions;
+}
+
+const ShepherdTourContext = React.createContext<Tour | null>(null);
 const ShepherdTourContextConsumer = ShepherdTourContext.Consumer;
 
 /**
  * Take a set of steps and formats to use actions on the buttons in the current context
  * @param {Array} steps
+ * @param {Array} tour
  * @private
  */
-const addSteps = (steps: Array<Step> | Array<Step.StepOptions>, tour: Tour) => {
+const addSteps = (steps: Array<Step.StepOptions>, tour: Tour) => {
   // Return nothing if there are no steps
   if (!steps.length) {
     return [];
   }
 
-  steps.forEach((step: any, index: number): Step => {
+  const parsedStepsforAction = steps.map((step: Step.StepOptions): Step.StepOptions => {
     const { buttons } = step;
 
     if (buttons) {
-      step.buttons = buttons.map((button: ShepherdStepWithType) => {
+      step.buttons = buttons.map((button: ShepherdButtonWithType) => {
         const { type, classes, text, action } = button;
         return {
           // TypeScript doesn't have great support for dynamic method calls with
@@ -43,8 +48,10 @@ const addSteps = (steps: Array<Step> | Array<Step.StepOptions>, tour: Tour) => {
       });
     }
 
-    return tour.addStep(step);
+    return step;
   });
+
+  parsedStepsforAction.forEach((step: any) => tour.addStep(step));
 };
 
 export const ShepherdTour: FunctionComponent<ShepherdProps> = props => {
