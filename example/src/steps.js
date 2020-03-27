@@ -27,8 +27,7 @@ export default [
         type: 'next',
         text: 'Next'
       }
-    ],
-    useModalOverlay: true
+    ]
   },
   {
     id: 'installation',
