@@ -25,7 +25,7 @@
     "deploy": "gh-pages -d example/build"
   },
   "dependencies": {
-    "shepherd.js": "^7.0.1"
+    "shepherd.js": "^7.1.0"
   },
   "peerDependencies": {
     "react": "^16.8.0",
