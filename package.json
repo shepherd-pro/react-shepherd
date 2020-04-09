@@ -71,7 +71,7 @@
     "install-peers-cli": "^2.2.0",
     "react-scripts": "^3.4.0",
     "react-syntax-highlighter": "^12.2.1",
-    "rollup": "^1.19.4",
+    "rollup": "^2.3.4",
     "rollup-plugin-babel": "^4.3.3",
     "rollup-plugin-commonjs": "^10.0.1",
     "rollup-plugin-node-resolve": "^5.2.0",
