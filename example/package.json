@@ -6,9 +6,7 @@
   "private": true,
   "dependencies": {
     "prop-types": "^15.7.2",
-    "react": "^16.8.6",
-    "react-dom": "^16.8.6",
-    "react-scripts": "^3.2.0",
+    "react-scripts": "^3.4.0",
     "react-shepherd": "link:..",
     "react-syntax-highlighter": "^12.2.1"
   },

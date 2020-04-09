@@ -5,12 +5,12 @@ export default [
       `
       <p>
       Shepherd is a JavaScript library for guiding users through your app.
-      It uses <a href="http://tether.io/">Tether</a>,
+      It uses <a href="https://popper.js.org/">Popper.js</a>,
       another open source library, to render dialogs for each tour "step".
       </p>
 
       <p>
-      Among many things, Tether makes sure your steps never end up off screen or
+      Among many things, Popper makes sure your steps never end up off screen or
       cropped by an overflow. (Try resizing your browser to see what we mean.)
       </p>
       `
@@ -67,38 +67,11 @@ export default [
     ]
   },
   {
-    id: 'modal',
-    attachTo: {
-      element: '.modal-element',
-      on: 'top'
-    },
-    buttons: [
-      {
-        type: 'back',
-        classes: 'shepherd-button-secondary',
-        text: 'Back'
-      },
-      {
-        type: 'next',
-        text: 'Next'
-      }
-    ],
-    classes: 'custom-class-name-1 custom-class-name-2',
-    text: [
-      `<p>
-        We implemented true modal functionality by disabling clicking of the rest of the page.
-      </p>
-      <p>
-        If you would like to enable modal, simply add <code>useModalOverlay: true</code> to your tourOptions object.
-      </p>`
-    ]
-  },
-  {
     id: 'centered-example',
     title: 'Centered Shepherd Element',
     text: `But attachment is totally optional!\n \
     Without a target, a tour step will create an element that's centered within the view. \
-    Check out the <a href="https://shipshapecode.github.io/shepherd/">documentation</a> to learn more.`,
+    Check out the <a href="https://shepherdjs.dev/docs/">documentation</a> to learn more.`,
     buttons: [
       {
         type: 'back',
