@@ -1419,10 +1419,10 @@
   resolved "https://registry.yarnpkg.com/@nodelib/fs.stat/-/fs.stat-1.1.3.tgz#2b5a3ab3f918cca48a8c754c08168e3f03eba61b"
   integrity sha512-shAmDyaQC4H92APFoIaVDHCx5bStIocgvbwQyxPRrbUY20V1EYTbSDchWbuwlMG3V17cprZhA6+78JfB+3DTPw==
 
-"@popperjs/core@^2.1.1":
-  version "2.1.1"
-  resolved "https://registry.yarnpkg.com/@popperjs/core/-/core-2.1.1.tgz#12c572ab88ef7345b43f21883fca26631c223085"
-  integrity sha512-sLqWxCzC5/QHLhziXSCAksBxHfOnQlhPRVgPK0egEw+ktWvG75T2k+aYWVjVh9+WKeT3tlG3ZNbZQvZLmfuOIw==
+"@popperjs/core@^2.3.1":
+  version "2.3.3"
+  resolved "https://registry.yarnpkg.com/@popperjs/core/-/core-2.3.3.tgz#8731722aeb7330e8fd9eb5d424be6b98dea7d6da"
+  integrity sha512-yEvVC8RfhRPkD9TUn7cFcLcgoJePgZRAOR7T21rcRY5I8tpuhzeWfGa7We7tB14fe9R7wENdqUABcMdwD4SQLw==
 
 "@sheerun/mutationobserver-shim@^0.3.2":
   version "0.3.2"
@@ -10331,11 +10331,11 @@ shellwords@^0.1.1:
   integrity sha512-vFwSUfQvqybiICwZY5+DAWIPLKsWO31Q91JSKl3UYv+K5c2QRPzn0qzec6QPu1Qc9eHYItiP3NdJqNVqetYAww==
 
 shepherd.js@^7.1.0:
-  version "7.1.0"
-  resolved "https://registry.yarnpkg.com/shepherd.js/-/shepherd.js-7.1.0.tgz#d6df9e53d1059c311d6f48457ac2a3ee60d3ff3f"
-  integrity sha512-v05kXIJTN0hA4EzYtFi+d5U96B2jCsGw9rFJb8lyHAkvX2CQT9OL/OaxeLU92aqVV9fvvh1hLB/LCIF9ArzQWA==
+  version "7.1.1"
+  resolved "https://registry.yarnpkg.com/shepherd.js/-/shepherd.js-7.1.1.tgz#9fdb43424f62b67450082c7c215de7a94552ecc4"
+  integrity sha512-rvrxz1MfimWmakKluxr2LJ7EKX358aA7flXeL6kuHa7CDJjPZEEBvg92apj7HiQ2PaaGv3/Ox/n3ZKVIiWrFRQ==
   dependencies:
-    "@popperjs/core" "^2.1.1"
+    "@popperjs/core" "^2.3.1"
     smoothscroll-polyfill "^0.4.4"
 
 side-channel@^1.0.2:
