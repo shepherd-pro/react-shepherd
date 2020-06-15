@@ -184,28 +184,12 @@
     "@babel/template" "^7.10.1"
     "@babel/types" "^7.10.1"
 
-"@babel/helper-function-name@^7.8.3":
-  version "7.8.3"
-  resolved "https://registry.yarnpkg.com/@babel/helper-function-name/-/helper-function-name-7.8.3.tgz#eeeb665a01b1f11068e9fb86ad56a1cb1a824cca"
-  integrity sha512-BCxgX1BC2hD/oBlIFUgOCQDOPV8nSINxCwM3o93xP4P9Fq6aV5sgv2cOOITDMtCfQ+3PvHp3l689XZvAM9QyOA==
-  dependencies:
-    "@babel/helper-get-function-arity" "^7.8.3"
-    "@babel/template" "^7.8.3"
-    "@babel/types" "^7.8.3"
-
 "@babel/helper-get-function-arity@^7.10.1":
   version "7.10.1"
   resolved "https://registry.yarnpkg.com/@babel/helper-get-function-arity/-/helper-get-function-arity-7.10.1.tgz#7303390a81ba7cb59613895a192b93850e373f7d"
   integrity sha512-F5qdXkYGOQUb0hpRaPoetF9AnsXknKjWMZ+wmsIRsp5ge5sFh4c3h1eH2pRTTuy9KKAA2+TTYomGXAtEL2fQEw==
   dependencies:
     "@babel/types" "^7.10.1"
-
-"@babel/helper-get-function-arity@^7.8.3":
-  version "7.8.3"
-  resolved "https://registry.yarnpkg.com/@babel/helper-get-function-arity/-/helper-get-function-arity-7.8.3.tgz#b894b947bd004381ce63ea1db9f08547e920abd5"
-  integrity sha512-FVDR+Gd9iLjUMY1fzE2SR0IuaJToR4RkCDARVfsBBPSP53GEqSFjD8gNyxg246VUyc/ALRxFaAK8rVG7UT7xRA==
-  dependencies:
-    "@babel/types" "^7.8.3"
 
 "@babel/helper-hoist-variables@^7.10.1":
   version "7.10.1"
@@ -317,16 +301,6 @@
     "@babel/template" "^7.10.1"
     "@babel/traverse" "^7.10.1"
     "@babel/types" "^7.10.1"
-
-"@babel/helper-wrap-function@^7.8.3":
-  version "7.8.3"
-  resolved "https://registry.yarnpkg.com/@babel/helper-wrap-function/-/helper-wrap-function-7.8.3.tgz#9dbdb2bb55ef14aaa01fe8c99b629bd5352d8610"
-  integrity sha512-LACJrbUET9cQDzb6kG7EeD7+7doC3JNvUgTEQOx2qaO1fKlzE/Bf05qs9w1oXQMmXlPO65lC3Tq9S6gZpTErEQ==
-  dependencies:
-    "@babel/helper-function-name" "^7.8.3"
-    "@babel/template" "^7.8.3"
-    "@babel/traverse" "^7.8.3"
-    "@babel/types" "^7.8.3"
 
 "@babel/helpers@^7.10.1", "@babel/helpers@^7.9.0":
   version "7.10.1"
@@ -451,13 +425,13 @@
     "@babel/plugin-syntax-function-bind" "^7.10.1"
 
 "@babel/plugin-proposal-function-sent@^7.5.0":
-  version "7.8.3"
-  resolved "https://registry.yarnpkg.com/@babel/plugin-proposal-function-sent/-/plugin-proposal-function-sent-7.8.3.tgz#341fd532b7eadbbbdd8bcb715150f279a779f14f"
-  integrity sha512-lu9wQjLnXd6Zy6eBKr0gE175xfD+da1rv2wOWEnZlD5KIxl894Tg34ppZ7ANR0jzQJMn+7pGuzSdy6JK4zGtKg==
+  version "7.10.1"
+  resolved "https://registry.yarnpkg.com/@babel/plugin-proposal-function-sent/-/plugin-proposal-function-sent-7.10.1.tgz#e9ffe9df5348e2694d6679f8fd0897acf14326d7"
+  integrity sha512-mpfEbRcwHvDA6k19ZFsGkW4Q+AF7DekafKTTfn2Ihz1cs6/qL+KgAJlcHBY6XnW1OW1zDaNCR0i28Blonl8/Bg==
   dependencies:
-    "@babel/helper-plugin-utils" "^7.8.3"
-    "@babel/helper-wrap-function" "^7.8.3"
-    "@babel/plugin-syntax-function-sent" "^7.8.3"
+    "@babel/helper-plugin-utils" "^7.10.1"
+    "@babel/helper-wrap-function" "^7.10.1"
+    "@babel/plugin-syntax-function-sent" "^7.10.1"
 
 "@babel/plugin-proposal-json-strings@^7.10.1", "@babel/plugin-proposal-json-strings@^7.2.0", "@babel/plugin-proposal-json-strings@^7.8.3":
   version "7.10.1"
@@ -635,12 +609,12 @@
   dependencies:
     "@babel/helper-plugin-utils" "^7.10.1"
 
-"@babel/plugin-syntax-function-sent@^7.8.3":
-  version "7.8.3"
-  resolved "https://registry.yarnpkg.com/@babel/plugin-syntax-function-sent/-/plugin-syntax-function-sent-7.8.3.tgz#5a4874bdfc271f0fa1c470bf508dc54af3041e19"
-  integrity sha512-NNEutF0x2PdWYij2bmf/i50dSq4SUdgFij4BZwj3I4qDZgql3dlFJRyvwGHAhwKYElUKHaP0wQ/yO1d/enpJaw==
+"@babel/plugin-syntax-function-sent@^7.10.1":
+  version "7.10.1"
+  resolved "https://registry.yarnpkg.com/@babel/plugin-syntax-function-sent/-/plugin-syntax-function-sent-7.10.1.tgz#42a03af38dd7f46121c97c67d032da4749792478"
+  integrity sha512-Ze/5A9mFucmT7UyEA8D60YijmclEZQp3kjzbbEImWnyMLmjE/3S5x7lkCr+W7g2wc00nqk1QLsloa4+1EiHULA==
   dependencies:
-    "@babel/helper-plugin-utils" "^7.8.3"
+    "@babel/helper-plugin-utils" "^7.10.1"
 
 "@babel/plugin-syntax-import-meta@^7.2.0":
   version "7.10.1"
@@ -1261,7 +1235,7 @@
   dependencies:
     regenerator-runtime "^0.13.4"
 
-"@babel/template@^7.10.1", "@babel/template@^7.4.0", "@babel/template@^7.8.3", "@babel/template@^7.8.6":
+"@babel/template@^7.10.1", "@babel/template@^7.4.0", "@babel/template@^7.8.6":
   version "7.10.1"
   resolved "https://registry.yarnpkg.com/@babel/template/-/template-7.10.1.tgz#e167154a94cb5f14b28dc58f5356d2162f539811"
   integrity sha512-OQDg6SqvFSsc9A0ej6SKINWrpJiNonRIniYondK2ViKhB06i3c0s+76XUft71iqBEe9S1OKsHwPAjfHnuvnCig==
@@ -1270,7 +1244,7 @@
     "@babel/parser" "^7.10.1"
     "@babel/types" "^7.10.1"
 
-"@babel/traverse@^7.1.0", "@babel/traverse@^7.10.1", "@babel/traverse@^7.4.3", "@babel/traverse@^7.7.0", "@babel/traverse@^7.8.3", "@babel/traverse@^7.9.0":
+"@babel/traverse@^7.1.0", "@babel/traverse@^7.10.1", "@babel/traverse@^7.4.3", "@babel/traverse@^7.7.0", "@babel/traverse@^7.9.0":
   version "7.10.1"
   resolved "https://registry.yarnpkg.com/@babel/traverse/-/traverse-7.10.1.tgz#bbcef3031e4152a6c0b50147f4958df54ca0dd27"
   integrity sha512-C/cTuXeKt85K+p08jN6vMDz8vSV0vZcI0wmQ36o6mjbuo++kPMdpOYw23W2XH04dbRt9/nMEfA4W3eR21CD+TQ==
