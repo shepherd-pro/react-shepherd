@@ -29,8 +29,8 @@ npm install --save react-shepherd
 ## Usage
 
 ```jsx
-import React, { Component } from 'react'
-import {ShepherdTour, ShepherdTourContext} from 'react-shepherd'
+import React, { Component, useContext } from 'react'
+import { ShepherdTour, ShepherdTourContext } from 'react-shepherd'
 import newSteps from './steps'
 
 const tourOptions = {
@@ -61,6 +61,7 @@ class App extends Component {
         </ShepherdTour>
       </div>
     );
+  }
 }
 ```
 
@@ -83,49 +84,49 @@ You must pass an array of steps to `steps`, something like this:
 const steps = [
   {
     id: 'intro',
-      attachTo: '.first-element bottom',
-      beforeShowPromise: function() {
-        return new Promise(function(resolve) {
-          setTimeout(function() {
-            window.scrollTo(0, 0);
-            resolve();
-          }, 500);
-        });
+    attachTo: '.first-element bottom',
+    beforeShowPromise: function () {
+      return new Promise(function (resolve) {
+        setTimeout(function () {
+          window.scrollTo(0, 0);
+          resolve();
+        }, 500);
+      });
+    },
+    buttons: [
+      {
+        classes: 'shepherd-button-secondary',
+        text: 'Exit',
+        type: 'cancel'
       },
-      buttons: [
-        {
-          classes: 'shepherd-button-secondary',
-          text: 'Exit',
-          type: 'cancel'
-        },
-        {
-          classes: 'shepherd-button-primary',
-          text: 'Back',
-          type: 'back'
-        },
-        {
-          classes: 'shepherd-button-primary',
-          text: 'Next',
-          type: 'next'
-        }
-      ],
-      classes: 'custom-class-name-1 custom-class-name-2',
-      highlightClass: 'highlight',
-      scrollTo: false,
-      showCancelLink: true,
-      title: 'Welcome to React-Shepherd!',
-      text: ['React-Shepherd is a JavaScript library for guiding users through your React app.'],
-      when: {
-        show: () => {
-          console.log('show step');
-        },
-        hide: () => {
-          console.log('hide step');
-        }
+      {
+        classes: 'shepherd-button-primary',
+        text: 'Back',
+        type: 'back'
+      },
+      {
+        classes: 'shepherd-button-primary',
+        text: 'Next',
+        type: 'next'
       }
+    ],
+    classes: 'custom-class-name-1 custom-class-name-2',
+    highlightClass: 'highlight',
+    scrollTo: false,
+    showCancelLink: true,
+    title: 'Welcome to React-Shepherd!',
+    text: ['React-Shepherd is a JavaScript library for guiding users through your React app.'],
+    when: {
+      show: () => {
+        console.log('show step');
+      },
+      hide: () => {
+        console.log('hide step');
+      }
+    }
   },
-  ...
-]);
+  // ...
+];
 ```
 
 ## Steps
