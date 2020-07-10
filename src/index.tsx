@@ -5,6 +5,9 @@ import Tour from 'shepherd.js/src/types/tour';
 
 interface ShepherdButtonWithType extends Step.StepOptionsButton {
   type?: string;
+  // Shepherd.js `StepOptionsButton` interface is missing `secondary` props.
+  // Adding this property here until the PR (https://github.com/shipshapecode/shepherd/pull/1040) is merged.
+  secondary?: boolean;
 }
 
 interface ShepherdOptionsWithType extends Step.StepOptions {
@@ -36,7 +39,7 @@ const addSteps = (steps: Array<Step.StepOptions>, tour: Tour) => {
 
     if (buttons) {
       step.buttons = buttons.map((button: ShepherdButtonWithType) => {
-        const { action, classes, disabled, label, text, type } = button;
+        const { action, classes, disabled, label, secondary, text, type } = button;
         return {
           // TypeScript doesn't have great support for dynamic method calls with
           // bracket notation, so we use the `any` escape hatch
@@ -44,6 +47,7 @@ const addSteps = (steps: Array<Step.StepOptions>, tour: Tour) => {
           classes,
           disabled,
           label,
+          secondary,
           text,
           type
         };
