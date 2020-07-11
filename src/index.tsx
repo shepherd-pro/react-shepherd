@@ -5,9 +5,6 @@ import Tour from 'shepherd.js/src/types/tour';
 
 interface ShepherdButtonWithType extends Step.StepOptionsButton {
   type?: string;
-  // Shepherd.js `StepOptionsButton` interface is missing `secondary` props.
-  // Adding this property here until the PR (https://github.com/shipshapecode/shepherd/pull/1040) is merged.
-  secondary?: boolean;
 }
 
 interface ShepherdOptionsWithType extends Step.StepOptions {
