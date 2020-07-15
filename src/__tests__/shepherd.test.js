@@ -32,7 +32,11 @@ const steps = [
   }
 ];
 const tourOptions = {
-  defaultStepOptions: { showCancelLink: true },
+  defaultStepOptions: {
+    cancelIcon: {
+      enabled: true
+    }
+  },
   useModalOverlay: true
 };
 
