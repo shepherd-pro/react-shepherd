@@ -113,7 +113,9 @@ const steps = [
     classes: 'custom-class-name-1 custom-class-name-2',
     highlightClass: 'highlight',
     scrollTo: false,
-    showCancelLink: true,
+    cancelIcon: {
+      enabled: true,
+    },
     title: 'Welcome to React-Shepherd!',
     text: ['React-Shepherd is a JavaScript library for guiding users through your React app.'],
     when: {
