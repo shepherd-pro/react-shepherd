@@ -2,34 +2,29 @@
   "name": "react-shepherd",
   "version": "3.3.0",
   "description": "A React wrapper for the site tour library Shepherd",
-  "license": "MIT",
+  "homepage": "https://shipshapecode.github.io/react-shepherd/",
   "repository": "shipshapecode/react-shepherd",
+  "license": "MIT",
   "main": "dist/Shepherd.js",
   "module": "dist/Shepherd.es.js",
   "jsnext:main": "dist/Shepherd.es.js",
   "types": "dist/index.d.ts",
-  "homepage": "https://shipshapecode.github.io/react-shepherd/",
-  "engines": {
-    "node": ">=8",
-    "npm": ">=5"
-  },
+  "files": [
+    "dist"
+  ],
   "scripts": {
-    "prepare": "install-peers",
-    "test": "cross-env CI=1 react-scripts test",
-    "test:watch": "react-scripts test",
     "prebuild": "tsc --project ./tsconfig-declarations.json",
     "build": "rollup -c",
+    "predeploy": "cd example && yarn install && yarn run build",
+    "deploy": "gh-pages -d example/build",
+    "prepare": "install-peers",
     "problems": "tsc --noEmit",
     "start": "rollup -c -w",
-    "predeploy": "cd example && yarn install && yarn run build",
-    "deploy": "gh-pages -d example/build"
+    "test": "cross-env CI=1 react-scripts test",
+    "test:watch": "react-scripts test"
   },
   "dependencies": {
     "shepherd.js": "^8.0.2"
-  },
-  "peerDependencies": {
-    "react": "^16.8.0",
-    "react-dom": "^16.8.0"
   },
   "devDependencies": {
     "@babel/core": "^7.5.4",
@@ -72,6 +67,8 @@
     "install-peers-cli": "^2.2.0",
     "react-scripts": "^3.4.0",
     "react-syntax-highlighter": "^12.2.1",
+    "release-it": "^13.6.5",
+    "release-it-lerna-changelog": "^2.3.0",
     "rollup": "^2.6.1",
     "rollup-plugin-babel": "^4.3.3",
     "rollup-plugin-commonjs": "^10.0.1",
@@ -83,9 +80,32 @@
     "tslib": "^1.10.0",
     "typescript": "^3.6.2"
   },
-  "files": [
-    "dist"
-  ],
+  "peerDependencies": {
+    "react": "^16.8.0",
+    "react-dom": "^16.8.0"
+  },
+  "engines": {
+    "node": ">=8",
+    "npm": ">=5"
+  },
+  "publishConfig": {
+    "registry": "https://registry.npmjs.org"
+  },
+  "release-it": {
+    "plugins": {
+      "release-it-lerna-changelog": {
+        "infile": "CHANGELOG.md",
+        "launchEditor": true
+      }
+    },
+    "git": {
+      "tagName": "v${version}"
+    },
+    "github": {
+      "release": true,
+      "tokenRef": "GITHUB_AUTH"
+    }
+  },
   "volta": {
     "node": "10.16.3",
     "yarn": "1.22.0"
