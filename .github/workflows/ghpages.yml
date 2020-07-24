@@ -3,7 +3,7 @@ name: Build and GH Pages Deploy
 on:
   push:
     branches:
-      - chore/pages-publish
+      - master
 jobs:
   build:
 
