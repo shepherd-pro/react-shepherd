@@ -17,7 +17,7 @@ addons:
   code_climate:
     repo_token:
       secure: "Ilc67FyHl9y9v0e86T9+foBEhWapwwLfqH2T+sc9T8LeaXP+yaE6gf8RjvEALnmcYLWmF3/ZlJsAhpMBJV2I9CV48LPT8qUL7B3AM7EBeLk7GA5q0pEBU90eAW04vNWH9rMXRTaQ6t/me9UvpoFHNghC+Y+J8N/l6g4xF1qjiBA="
-  
+
 branches:
   only:
     - master
@@ -25,7 +25,7 @@ branches:
 
 cache:
   yarn: true
-  
+
 before_install:
   - yarn global add greenkeeper-lockfile@1
 
@@ -36,7 +36,6 @@ stages:
   - test
   - name: npm-release
     if: (tag =~ ^v)
-  - gh-pages release  
 
 jobs:
   include:
@@ -75,11 +74,4 @@ jobs:
           if [ "$(npm_dist_tag)" == "latest" ]; then
             npm dist-tag rm shepherd.js next || true
           fi
-    - stage: gh-pages release
-      deploy:
-        provider: pages
-        skip-cleanup: true
-        github-token: $GITHUB_TOKEN
-        keep-history: true
-        on:
-          branch: master
+
