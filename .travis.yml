@@ -36,7 +36,6 @@ stages:
   - test
   - name: npm-release
     if: (tag =~ ^v)
-  - gh-pages release
 
 jobs:
   include:
