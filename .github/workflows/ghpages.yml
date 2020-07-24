@@ -3,7 +3,7 @@ name: Build and GH Pages Deploy
 on:
   push:
     branches:
-      - master
+      - chore/pages-publish
 jobs:
   build:
 
@@ -32,3 +32,5 @@ jobs:
       with:
         # Build directory to deploy
         build_dir: example/build
+      env:
+        GITHUB_TOKEN: ${{ secrets.GITHUB_TOKEN }}
