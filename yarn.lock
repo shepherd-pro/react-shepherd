@@ -576,12 +576,12 @@
     "@babel/plugin-syntax-optional-chaining" "^7.8.0"
 
 "@babel/plugin-proposal-pipeline-operator@^7.5.0":
-  version "7.10.1"
-  resolved "https://registry.yarnpkg.com/@babel/plugin-proposal-pipeline-operator/-/plugin-proposal-pipeline-operator-7.10.1.tgz#d7129bf1b170efef250759b82b64ce9a9b29d335"
-  integrity sha512-P+WKKsi7XBEvvTaregnYZIF+aLoCTNt0T21tbzeGlOdERmR1X0iFXJKqZbxsJooa+a3f/tKYFhbJYqnKt70x2w==
+  version "7.10.5"
+  resolved "https://registry.yarnpkg.com/@babel/plugin-proposal-pipeline-operator/-/plugin-proposal-pipeline-operator-7.10.5.tgz#0fa2871dbfb74efe19eeb17722032056cb5697f3"
+  integrity sha512-tCpZ46KUAHgFoXsH593k9sX/ZKsNb4NlTGNif8PdlmkGbtYdbTQi6zNv8yibpRf+3sQFElOBLyNo3I5ZwVu90g==
   dependencies:
-    "@babel/helper-plugin-utils" "^7.10.1"
-    "@babel/plugin-syntax-pipeline-operator" "^7.10.1"
+    "@babel/helper-plugin-utils" "^7.10.4"
+    "@babel/plugin-syntax-pipeline-operator" "^7.10.4"
 
 "@babel/plugin-proposal-private-methods@^7.10.1":
   version "7.10.1"
@@ -740,12 +740,12 @@
   dependencies:
     "@babel/helper-plugin-utils" "^7.8.0"
 
-"@babel/plugin-syntax-pipeline-operator@^7.10.1":
-  version "7.10.1"
-  resolved "https://registry.yarnpkg.com/@babel/plugin-syntax-pipeline-operator/-/plugin-syntax-pipeline-operator-7.10.1.tgz#07cd46978b26f21eb8c4231534a64aaa686b3cd3"
-  integrity sha512-6jvu8KNBnEGuwlRpAQxTHsKcYuGqSf1gAv1c7j+CP7evNU8atjCRW6pK/W1AxeTz1WXWpzciOQTK4hLfPlXKDQ==
+"@babel/plugin-syntax-pipeline-operator@^7.10.4":
+  version "7.10.4"
+  resolved "https://registry.yarnpkg.com/@babel/plugin-syntax-pipeline-operator/-/plugin-syntax-pipeline-operator-7.10.4.tgz#31bf327cf780dd60e0444fd98561119795247a6c"
+  integrity sha512-QOmXevisZebt9pBkMdDdXWg+fndB8dT/puwSKKu/1K3P4oBwmydN/4dX1hdrNvPHbw4xE+ocIoEus7c4eh7Igg==
   dependencies:
-    "@babel/helper-plugin-utils" "^7.10.1"
+    "@babel/helper-plugin-utils" "^7.10.4"
 
 "@babel/plugin-syntax-throw-expressions@^7.10.1":
   version "7.10.1"
@@ -1336,7 +1336,7 @@
     globals "^11.1.0"
     lodash "^4.17.19"
 
-"@babel/types@^7.0.0", "@babel/types@^7.10.1", "@babel/types@^7.10.2", "@babel/types@^7.10.4", "@babel/types@^7.10.5", "@babel/types@^7.11.0", "@babel/types@^7.3.0", "@babel/types@^7.4.0", "@babel/types@^7.4.4", "@babel/types@^7.7.0", "@babel/types@^7.8.3", "@babel/types@^7.9.0", "@babel/types@^7.9.5":
+"@babel/types@^7.0.0", "@babel/types@^7.10.1", "@babel/types@^7.10.2", "@babel/types@^7.10.4", "@babel/types@^7.10.5", "@babel/types@^7.11.0", "@babel/types@^7.3.0", "@babel/types@^7.4.0", "@babel/types@^7.4.4", "@babel/types@^7.7.0", "@babel/types@^7.9.0", "@babel/types@^7.9.5":
   version "7.11.0"
   resolved "https://registry.yarnpkg.com/@babel/types/-/types-7.11.0.tgz#2ae6bf1ba9ae8c3c43824e5861269871b206e90d"
   integrity sha512-O53yME4ZZI0jO1EVGtF1ePGl0LHirG4P1ibcD80XyzZcKhcMFeCXmh4Xb1ifGBIV233Qg12x4rBfQgA+tmOukA==
