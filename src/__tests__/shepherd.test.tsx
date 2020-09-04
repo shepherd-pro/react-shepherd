@@ -1,5 +1,4 @@
 import React, { useContext } from 'react';
-import MutationObserver from '@sheerun/mutationobserver-shim';
 import { render, fireEvent } from '@testing-library/react';
 import { ShepherdTour, ShepherdTourContext } from '../';
 
@@ -41,9 +40,6 @@ const tourOptions = {
 };
 
 describe('<ShepherdTour />', () => {
-  beforeAll(() => {
-    window.MutationObserver = MutationObserver;
-  });
   it('exists', () => {
     expect(ShepherdTour).toBeTruthy();
   });
