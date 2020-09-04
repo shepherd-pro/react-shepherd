@@ -3,8 +3,6 @@ import Shepherd from 'shepherd.js';
 import Step from 'shepherd.js/src/types/step';
 import Tour from 'shepherd.js/src/types/tour';
 
-export { Step, Tour };
-
 export interface ShepherdButtonWithType extends Step.StepOptionsButton {
   type?: string;
 }
@@ -76,4 +74,6 @@ export const ShepherdTour: FunctionComponent<ShepherdProps> = props => {
   );
 };
 
+export type { default as Step } from 'shepherd.js/src/types/step';
+export type { default as Tour } from 'shepherd.js/src/types/tour';
 export { ShepherdTourContextConsumer as TourMethods, ShepherdTourContext };
