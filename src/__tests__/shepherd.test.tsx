@@ -1,7 +1,7 @@
-import React from 'react';
+import React, { useContext } from 'react';
 import MutationObserver from '@sheerun/mutationobserver-shim';
 import { render, fireEvent } from '@testing-library/react';
-import { ShepherdTour, TourMethods } from '../';
+import { ShepherdTour, ShepherdTourContext } from '../';
 
 const steps = [
   {
@@ -49,11 +49,27 @@ describe('<ShepherdTour />', () => {
   });
 
   it('renders the component and starts tour', async () => {
-    const container = render(
-      <ShepherdTour steps={steps} tourOptions={tourOptions}>
-        <TourMethods>{context => <div>{context.start()}</div>}</TourMethods>
-      </ShepherdTour>
-    );
+    const Button = () => {
+      const tour = useContext(ShepherdTourContext);
+
+      return (
+        <button className="button dark" onClick={tour?.start}>
+          Start Tour
+        </button>
+      );
+    }
+    const TestApp = () => {
+
+      return (
+        <ShepherdTour steps={steps} tourOptions={tourOptions}>
+          <Button />
+        </ShepherdTour>
+      )
+    }
+
+    const container = render(<TestApp />);
+    await fireEvent.click(container.getByText(/Start Tour/));
+
     const cancelBtn = await container.findByText('Exit');
     const nextBtn = await container.findByText('Next');
 
