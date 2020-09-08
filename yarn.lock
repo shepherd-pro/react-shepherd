@@ -478,9 +478,9 @@
     "@babel/plugin-syntax-export-namespace-from" "^7.8.3"
 
 "@babel/plugin-proposal-function-bind@^7.2.0":
-  version "7.10.5"
-  resolved "https://registry.yarnpkg.com/@babel/plugin-proposal-function-bind/-/plugin-proposal-function-bind-7.10.5.tgz#62acbdde1c43e7dfae6efc9ddd5bc60920cee719"
-  integrity sha512-1lYbE2ynV9yN0LCEYCdEBD5pR6GaNkRfjn1z1tWDdWMJgunTFcJBZDJUgiMPcTMqAc3D6Vrm8v2khxjjx6FrCg==
+  version "7.11.5"
+  resolved "https://registry.yarnpkg.com/@babel/plugin-proposal-function-bind/-/plugin-proposal-function-bind-7.11.5.tgz#6ce571686dd1bc2f5c1ae7bdebad8aaa7fda3893"
+  integrity sha512-gkCyUqJp6jRPdHFAYZxGal6d6Poj17G+6FGbyUcHKew2sccp5HVilTgnreYqTzDsY10Ys0ZVB/U2knTnnJdkUQ==
   dependencies:
     "@babel/helper-plugin-utils" "^7.10.4"
     "@babel/plugin-syntax-function-bind" "^7.10.4"
