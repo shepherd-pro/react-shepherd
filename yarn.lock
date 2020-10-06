@@ -1647,10 +1647,10 @@
   dependencies:
     "@types/node" ">= 8"
 
-"@popperjs/core@^2.4.4":
-  version "2.4.4"
-  resolved "https://registry.yarnpkg.com/@popperjs/core/-/core-2.4.4.tgz#11d5db19bd178936ec89cd84519c4de439574398"
-  integrity sha512-1oO6+dN5kdIA3sKPZhRGJTfGVP4SWV6KqlMOwry4J3HfyD68sl/3KmG7DeYUzvN+RbhXDnv/D8vNNB8168tAMg==
+"@popperjs/core@^2.5.2":
+  version "2.5.3"
+  resolved "https://registry.yarnpkg.com/@popperjs/core/-/core-2.5.3.tgz#4982b0b66b7a4cf949b86f5d25a8cf757d3cfd9d"
+  integrity sha512-RFwCobxsvZ6j7twS7dHIZQZituMIDJJNHS/qY6iuthVebxS3zhRY+jaC2roEKiAYaVuTcGmX6Luc6YBcf6zJVg==
 
 "@sheerun/mutationobserver-shim@^0.3.2":
   version "0.3.3"
@@ -11770,11 +11770,11 @@ shellwords@^0.1.1:
   integrity sha512-vFwSUfQvqybiICwZY5+DAWIPLKsWO31Q91JSKl3UYv+K5c2QRPzn0qzec6QPu1Qc9eHYItiP3NdJqNVqetYAww==
 
 shepherd.js@^8.0.2:
-  version "8.0.2"
-  resolved "https://registry.yarnpkg.com/shepherd.js/-/shepherd.js-8.0.2.tgz#30675a68883c474b5c7b4056b98f2423b577708f"
-  integrity sha512-qFt5vrnVoshg6fS5gKGQznYGyIaEclyKKSl1Siw6gO7GyKnCEJ2aBDrp8pxKusMfZo5J5dtgeKJtsRav5cimjA==
+  version "8.1.0"
+  resolved "https://registry.yarnpkg.com/shepherd.js/-/shepherd.js-8.1.0.tgz#810b72a6ddf16f6e953126a1315108cc5709f7ce"
+  integrity sha512-mWab5hn2cdSdv5XF3IbBYyT2wPejAjK0flycbkRxqS1c+4epkKRMhpW9Eco6swDCu65wUP7PcecdjayokwI+Vg==
   dependencies:
-    "@popperjs/core" "^2.4.4"
+    "@popperjs/core" "^2.5.2"
     deepmerge "^4.2.2"
     smoothscroll-polyfill "^0.4.4"
 
