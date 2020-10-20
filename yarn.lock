@@ -577,12 +577,12 @@
     "@babel/helper-plugin-utils" "^7.10.4"
 
 "@babel/plugin-proposal-throw-expressions@^7.2.0":
-  version "7.10.4"
-  resolved "https://registry.yarnpkg.com/@babel/plugin-proposal-throw-expressions/-/plugin-proposal-throw-expressions-7.10.4.tgz#501154a3c1b33cb1ad5b899204481fa2859cd3f3"
-  integrity sha512-m7K9duXeH/rko36i9G9seLOg2AVdeVTn65k8nnTxgozex0hkDSUr6cktJxTO7jElGEpmMz410pTs0Jn8+empxw==
+  version "7.12.1"
+  resolved "https://registry.yarnpkg.com/@babel/plugin-proposal-throw-expressions/-/plugin-proposal-throw-expressions-7.12.1.tgz#5adf4abc7f349a2da532e663b36251f6017c4279"
+  integrity sha512-kiWkKtm05K86C+T/nUazv+/Vxu93Aulrvof/ZrxVyGoUBVsVEWDrw9iChbe8tV+aPVQcjg4FQxKW3wUF7cRcpg==
   dependencies:
     "@babel/helper-plugin-utils" "^7.10.4"
-    "@babel/plugin-syntax-throw-expressions" "^7.10.4"
+    "@babel/plugin-syntax-throw-expressions" "^7.12.1"
 
 "@babel/plugin-proposal-unicode-property-regex@^7.12.1", "@babel/plugin-proposal-unicode-property-regex@^7.4.4", "@babel/plugin-proposal-unicode-property-regex@^7.8.3":
   version "7.12.1"
@@ -732,10 +732,10 @@
   dependencies:
     "@babel/helper-plugin-utils" "^7.10.4"
 
-"@babel/plugin-syntax-throw-expressions@^7.10.4":
-  version "7.10.4"
-  resolved "https://registry.yarnpkg.com/@babel/plugin-syntax-throw-expressions/-/plugin-syntax-throw-expressions-7.10.4.tgz#a588df9fa2203207a3ac7e35f0db3b67bf68eca3"
-  integrity sha512-Yac/4W71+JdAiOV3aLbnUUe2R0NZzNvdy5EqdauFnBQTxIXT58M89lOplIFVELTSus6PxFMjmbi2vXaJDiV/PQ==
+"@babel/plugin-syntax-throw-expressions@^7.12.1":
+  version "7.12.1"
+  resolved "https://registry.yarnpkg.com/@babel/plugin-syntax-throw-expressions/-/plugin-syntax-throw-expressions-7.12.1.tgz#ff90a57ac599ba685a99274c86604d878c945094"
+  integrity sha512-+8FLGK1PYYB7D8tU9U5zX23fnzkpxw4a7lAyyZbgk6b6bN0k2dft/xwcxIE+86i54wLJ83BaAboh2Ow6wf6jHw==
   dependencies:
     "@babel/helper-plugin-utils" "^7.10.4"
 
