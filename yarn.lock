@@ -458,13 +458,13 @@
     "@babel/plugin-syntax-function-bind" "^7.12.1"
 
 "@babel/plugin-proposal-function-sent@^7.5.0":
-  version "7.10.4"
-  resolved "https://registry.yarnpkg.com/@babel/plugin-proposal-function-sent/-/plugin-proposal-function-sent-7.10.4.tgz#05f2daef7b3f09b6c74c9e8a85b430272d206ac4"
-  integrity sha512-aBtve/DhQsVPAGnSDcgt33gF36rO0TK+KtHp9Hwtj3KwH+o1Cii9vfVVYeB9c6Jo1SXOgTRwRD7ljpTS0qbN8w==
+  version "7.12.1"
+  resolved "https://registry.yarnpkg.com/@babel/plugin-proposal-function-sent/-/plugin-proposal-function-sent-7.12.1.tgz#8f302aa8ab5f00af6c94a3e1108fa35d15319510"
+  integrity sha512-EXB01ACyNW0WCffP4ip40TH82X86+U0dakFZjyiMpoZ8NFmL5MMARzVBzy+Gg59B6vTgfvIhRHUhe6tNUw+vjw==
   dependencies:
     "@babel/helper-plugin-utils" "^7.10.4"
     "@babel/helper-wrap-function" "^7.10.4"
-    "@babel/plugin-syntax-function-sent" "^7.10.4"
+    "@babel/plugin-syntax-function-sent" "^7.12.1"
 
 "@babel/plugin-proposal-json-strings@^7.12.1", "@babel/plugin-proposal-json-strings@^7.2.0", "@babel/plugin-proposal-json-strings@^7.8.3":
   version "7.12.1"
@@ -643,10 +643,10 @@
   dependencies:
     "@babel/helper-plugin-utils" "^7.10.4"
 
-"@babel/plugin-syntax-function-sent@^7.10.4":
-  version "7.10.4"
-  resolved "https://registry.yarnpkg.com/@babel/plugin-syntax-function-sent/-/plugin-syntax-function-sent-7.10.4.tgz#b551f38b629e2e20908e53624f96f9ab300f5061"
-  integrity sha512-dwElaRoDQhlVevbgKOlEUTe08QNJo4ZjWw3rqnMbEvH8NRJM+iPN2tTQtzyfNloXD8f3Jdiyf5Pn400B1U3SVA==
+"@babel/plugin-syntax-function-sent@^7.12.1":
+  version "7.12.1"
+  resolved "https://registry.yarnpkg.com/@babel/plugin-syntax-function-sent/-/plugin-syntax-function-sent-7.12.1.tgz#b5355304f0b0fb0cb1bf315903bf7cd13608e811"
+  integrity sha512-mtBQvNHcIzLnmQZhgzigzrgFzIe95WvBXJuTN0m4CvhDK0gRNQ2MC2AVSzB6w7VnVh/z5+0iHFcbfqKMlFwTkQ==
   dependencies:
     "@babel/helper-plugin-utils" "^7.10.4"
 
