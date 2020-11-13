@@ -1,6 +1,6 @@
 {
   "name": "react-shepherd",
-  "version": "3.3.0",
+  "version": "3.3.1",
   "description": "A React wrapper for the site tour library Shepherd",
   "homepage": "https://shipshapecode.github.io/react-shepherd/",
   "repository": "shipshapecode/react-shepherd",
