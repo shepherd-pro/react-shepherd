@@ -40,7 +40,7 @@ const addSteps = (steps: Array<Step.StepOptions>, tour: Tour) => {
         return {
           // TypeScript doesn't have great support for dynamic method calls with
           // bracket notation, so we use the `any` escape hatch
-          action: action || (tour as any)[type!],
+          action: (tour as any)[type!] || action,
           classes,
           disabled,
           label,
