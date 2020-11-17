@@ -65,7 +65,7 @@
     "gh-pages": "^2.0.1",
     "install-peers-cli": "^2.2.0",
     "react-scripts": "^3.4.0",
-    "react-syntax-highlighter": "^12.2.1",
+    "react-syntax-highlighter": "^15.3.0",
     "release-it": "^14.0.2",
     "release-it-lerna-changelog": "^2.3.0",
     "rollup": "^2.6.1",
