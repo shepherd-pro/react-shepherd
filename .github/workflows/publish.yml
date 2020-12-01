@@ -1,20 +1,16 @@
-name: Test
+name: Publish to NPM
 
 on:
-  push:
-    branches:
-      - master
-  pull_request:
-    branches:
-      - master
+  release:
+    types: [published]
 
 jobs:
-  test:
-    name: test
+  publish:
+    name: Build and Publissh
     runs-on: ubuntu-latest
 
     steps:
-      # Checkout the repo
+    # Checkout the repo
       - name: Checkout
         uses: actions/checkout@v1
 
@@ -38,9 +34,11 @@ jobs:
         if: steps.cache.outputs.cache-hit != 'true'
         run: yarn
 
-      # Run linter
-      # - name: Lint
-      #   run: yarn lint
+      - name: Build
+        run: yarn build
 
-      # Run tests
-        run: yarn test
+      - name: Publish
+        uses: JS-DevTools/npm-publish@v1
+        with:
+          token: ${{ secrets.NPM_AUTH_TOKEN }}
+
