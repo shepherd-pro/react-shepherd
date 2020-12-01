@@ -43,4 +43,5 @@ jobs:
       #   run: yarn lint
 
       # Run tests
+      - name: Run Tests
         run: yarn test
