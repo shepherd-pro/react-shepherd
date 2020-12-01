@@ -24,7 +24,7 @@ jobs:
         with:
           node-version: 14.3.0
 
-      Cache dependencies
+      # Cache dependencies
       - name: Cache Dependencies
         uses: actions/cache@v2
         id: cache
