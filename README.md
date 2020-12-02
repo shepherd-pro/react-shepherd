@@ -10,10 +10,9 @@
 </div>
 
 [![NPM](https://img.shields.io/npm/v/react-shepherd.svg)](https://www.npmjs.com/package/react-shepherd)
-[![Build Status](https://travis-ci.org/shipshapecode/react-shepherd.svg)](https://travis-ci.org/shipshapecode/react-shepherd)
+[![Test Status](https://github.com/shipshapecode/react-shepherd/workflows/Test/badge.svg)](https://github.com/shipshapecode/react-shepherd/actions?query=workflow%3ATest)
 [![Maintainability](https://api.codeclimate.com/v1/badges/d5273e1d465352a6df4e/maintainability)](https://codeclimate.com/github/shipshapecode/react-shepherd/maintainability)
 [![Test Coverage](https://api.codeclimate.com/v1/badges/d5273e1d465352a6df4e/test_coverage)](https://codeclimate.com/github/shipshapecode/react-shepherd/test_coverage)
-[![Greenkeeper badge](https://badges.greenkeeper.io/shipshapecode/react-shepherd.svg)](https://greenkeeper.io/)
 [![JavaScript Style Guide](https://img.shields.io/badge/code_style-standard-brightgreen.svg)](https://standardjs.com)
 
 This is a React wrapper for the [Shepherd](https://github.com/shipshapecode/shepherd), site tour, library.
