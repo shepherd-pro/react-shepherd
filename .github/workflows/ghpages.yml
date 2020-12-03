@@ -1,7 +1,8 @@
 name: Build and GH Pages Deploy
 
 on:
-  push
+  release:
+    types: [created]
 
 jobs:
   build:
