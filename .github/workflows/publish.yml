@@ -1,8 +1,8 @@
 name: Publish to NPM
 
 on:
-  release:
-    types: [created]
+  tags:
+      - v*
 
 jobs:
   publish:
