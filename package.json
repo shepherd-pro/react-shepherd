@@ -19,6 +19,7 @@
     "deploy": "gh-pages -d example/build",
     "prepare": "install-peers",
     "problems": "tsc --noEmit",
+    "release": "release-it",
     "start": "rollup -c -w",
     "test": "cross-env CI=1 react-scripts test",
     "test:watch": "react-scripts test"

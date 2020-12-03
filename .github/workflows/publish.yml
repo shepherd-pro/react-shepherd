@@ -2,12 +2,15 @@ name: Publish to NPM
 
 on:
   release:
-    types: [published]
+    types: [created]
 
 jobs:
   publish:
     name: Build and Publissh
     runs-on: ubuntu-latest
+
+    env:
+      NPM_TOKEN: ${{ secrets.NPM_AUTH_TOKEN }}
 
     steps:
     # Checkout the repo
@@ -37,8 +40,9 @@ jobs:
       - name: Build
         run: yarn build
 
-      - name: Publish
-        uses: JS-DevTools/npm-publish@v1
-        with:
-          token: ${{ secrets.NPM_AUTH_TOKEN }}
+      - name: Generate .npmrc
+        run: echo "//registry.npmjs.org/:_authToken=${NPM_TOKEN}" > .npmrc
+
+      - name: Release version
+        run: yarn release --ci
 
