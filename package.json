@@ -15,10 +15,11 @@
   "scripts": {
     "prebuild": "tsc --project ./tsconfig-declarations.json",
     "build": "rollup -c",
-    "predeploy": "cd example && yarn install && yarn run build",
+    "predeploy": "cd example && yarn && yarn build",
     "deploy": "gh-pages -d example/build",
     "prepare": "install-peers",
     "problems": "tsc --noEmit",
+    "release": "release-it",
     "start": "rollup -c -w",
     "test": "cross-env CI=1 react-scripts test",
     "test:watch": "react-scripts test"
