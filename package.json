@@ -68,7 +68,7 @@
     "react-scripts": "^3.4.0",
     "react-syntax-highlighter": "^15.3.0",
     "release-it": "^14.0.2",
-    "release-it-lerna-changelog": "^2.3.0",
+    "release-it-lerna-changelog": "^3.1.0",
     "rollup": "^2.6.1",
     "rollup-plugin-babel": "^4.3.3",
     "rollup-plugin-commonjs": "^10.0.1",
