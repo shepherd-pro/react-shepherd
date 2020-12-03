@@ -1,8 +1,9 @@
 name: Publish to NPM
 
 on:
-  tags:
-    - v*
+  push:
+    tags:
+      - v*
 
 jobs:
   publish:
