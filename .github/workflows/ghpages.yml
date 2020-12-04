@@ -37,14 +37,13 @@ jobs:
       run: |
         yarn
         yarn build
-      working-directory: ./example
+      working-directory: ./packages/example
 
-    # Push to GH pages
     - name: GitHub Pages
       if: success()
       uses: crazy-max/ghaction-github-pages@v1.2.5
       with:
         # Build directory to deploy
-        build_dir: example/build
+        build_dir: packages/example/build
       env:
         GITHUB_TOKEN: ${{ secrets.GITHUB_TOKEN }}
