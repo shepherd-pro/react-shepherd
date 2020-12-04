@@ -1,4 +1,18 @@
 {
   "private": true,
-  "workspaces": ["packages/*"]
+  "workspaces": ["packages/**/*"],
+  "devDependencies": {
+    "npm-run-all": "^4.1.5"
+  },
+  "scripts": {
+    "build": "yarn workspace react-shepherd build",
+    "release": "yarn workspace react-shepherd release",
+    "start:lib": "yarn workspace react-shepherd start",
+    "start:site": "yarn workspace react-shepherd-example start",
+    "start": "run-p start:*",
+    "test": "yarn workspace react-shepherd test"
+  },
+  "resolutions": {
+    "jsdom":"14.1.0"
+  }
 }

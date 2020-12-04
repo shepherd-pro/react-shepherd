@@ -5,6 +5,8 @@
   "license": "MIT",
   "private": true,
   "dependencies": {
+    "react": "^16.8.0",
+    "react-dom": "^16.8.0",
     "react-scripts": "^3.4.3",
     "react-shepherd": "*",
     "react-syntax-highlighter": "^15.3.1",
