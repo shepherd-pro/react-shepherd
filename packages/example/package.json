@@ -1,0 +1,25 @@
+{
+  "name": "react-shepherd-example",
+  "homepage": "https://shipshapecode.github.io/react-shepherd",
+  "version": "0.0.0",
+  "license": "MIT",
+  "private": true,
+  "dependencies": {
+    "react-scripts": "^3.4.3",
+    "react-shepherd": "*",
+    "react-syntax-highlighter": "^15.3.1",
+    "shepherd.js": "^8.0.2"
+  },
+  "scripts": {
+    "start": "react-scripts start",
+    "build": "react-scripts build",
+    "test": "react-scripts test",
+    "eject": "react-scripts eject"
+  },
+  "browserslist": [
+    ">0.2%",
+    "not dead",
+    "not ie <= 11",
+    "not op_mini all"
+  ]
+}

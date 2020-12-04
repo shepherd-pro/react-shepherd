@@ -37,9 +37,7 @@ jobs:
       run: |
         yarn
         yarn build
-      working-directory: ./example
-
-    # Push to GH pages
+      working-directory: ./packages/example
     - name: GitHub Pages
       if: success()
       uses: crazy-max/ghaction-github-pages@v1.2.5
