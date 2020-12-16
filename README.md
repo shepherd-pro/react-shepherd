@@ -31,6 +31,7 @@ npm install --save react-shepherd
 import React, { Component, useContext } from 'react'
 import { ShepherdTour, ShepherdTourContext } from 'react-shepherd'
 import newSteps from './steps'
+import 'shepherd.js/dist/css/shepherd.css';
 
 const tourOptions = {
   defaultStepOptions: {
