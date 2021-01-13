@@ -14,7 +14,7 @@ jobs:
       NPM_TOKEN: ${{ secrets.NPM_AUTH_TOKEN }}
 
     steps:
-    # Checkout the repo
+      # Checkout the repo
       - name: Checkout
         uses: actions/checkout@v1
 
@@ -46,4 +46,5 @@ jobs:
 
       - name: Release version
         run: yarn release --ci
-
+        env:
+          GITHUB_AUTH: ${{ secrets.GITHUB_TOKEN }}
