@@ -2,7 +2,10 @@
   "name": "react-shepherd",
   "version": "3.3.3",
   "homepage": "https://shipshapecode.github.io/react-shepherd/",
-  "repository": "shipshapecode/react-shepherd",
+  "repository": {
+    "type" : "git",
+    "url" : "https://github.com/shipshapecode/react-shepherd.git"
+  },
   "private": true,
   "workspaces": [
     "packages/**/*"
