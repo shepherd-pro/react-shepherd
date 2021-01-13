@@ -3,7 +3,10 @@
   "version": "3.3.2",
   "description": "A React wrapper for the site tour library Shepherd",
   "homepage": "https://shipshapecode.github.io/react-shepherd/",
-  "repository": "shipshapecode/react-shepherd",
+  "repository": {
+    "type": "git",
+    "url": "https://github.com/shipshapecode/react-shepherd.git"
+  },
   "license": "MIT",
   "main": "dist/Shepherd.js",
   "module": "dist/Shepherd.es.js",
@@ -27,7 +30,7 @@
   "dependencies": {
     "shepherd.js": "^8.0.2"
   },
-    "devDependencies": {
+  "devDependencies": {
     "@babel/core": "^7.5.4",
     "@babel/plugin-external-helpers": "^7.2.0",
     "@babel/plugin-proposal-class-properties": "^7.5.0",
@@ -90,24 +93,5 @@
   },
   "publishConfig": {
     "registry": "https://registry.npmjs.org"
-  },
-  "release-it": {
-    "plugins": {
-      "release-it-lerna-changelog": {
-        "infile": "CHANGELOG.md",
-        "launchEditor": true
-      }
-    },
-    "git": {
-      "tagName": "v${version}"
-    },
-    "github": {
-      "release": true,
-      "tokenRef": "GITHUB_AUTH"
-    }
-  },
-  "volta": {
-    "node": "12.18.0",
-    "yarn": "1.22.0"
   }
 }

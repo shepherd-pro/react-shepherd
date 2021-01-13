@@ -1,7 +1,4 @@
 {
-  "name": "react-shepherd",
-  "version": "3.3.4",
-  "homepage": "https://shipshapecode.github.io/react-shepherd/",
   "repository": {
     "type": "git",
     "url": "https://github.com/shipshapecode/react-shepherd.git"
@@ -11,7 +8,8 @@
     "packages/**/*"
   ],
   "devDependencies": {
-    "npm-run-all": "^4.1.5"
+    "npm-run-all": "^4.1.5",
+    "release-it-yarn-workspaces": "^2.0.0"
   },
   "scripts": {
     "build": "yarn workspace react-shepherd build",
@@ -23,5 +21,28 @@
   },
   "resolutions": {
     "jsdom": "14.1.0"
+  },
+  "release-it": {
+    "plugins": {
+      "release-it-yarn-workspaces": {
+        "workspaces": [
+          "packages/lib"
+        ]
+      },
+      "release-it-lerna-changelog": {
+        "infile": "CHANGELOG.md",
+        "launchEditor": true
+      }
+    },
+    "git": {
+      "tagName": "v${version}"
+    },
+    "github": {
+      "release": true,
+      "tokenRef": "GITHUB_AUTH"
+    },
+    "npm": {
+      "ignoreVersion": true
+    }
   }
 }
