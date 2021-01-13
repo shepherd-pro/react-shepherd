@@ -45,6 +45,6 @@ jobs:
         run: echo "//registry.npmjs.org/:_authToken=${NPM_TOKEN}" > .npmrc
 
       - name: Release version
-        run: yarn release --ci
+        run: yarn release --ci --npm.skipChecks
         env:
           GITHUB_AUTH: ${{ secrets.GITHUB_TOKEN }}
