@@ -1,7 +1,10 @@
 import React, { FunctionComponent, useMemo } from 'react';
 import Shepherd from 'shepherd.js';
-import Step from 'shepherd.js/src/types/step';
-import Tour from 'shepherd.js/src/types/tour';
+import _Step from 'shepherd.js/src/types/step';
+import _Tour from 'shepherd.js/src/types/tour';
+
+export import Step = _Step;
+export import Tour = _Tour;
 
 export interface ShepherdButtonWithType extends Step.StepOptionsButton {
   type?: string;
@@ -74,6 +77,4 @@ export const ShepherdTour: FunctionComponent<ShepherdProps> = props => {
   );
 };
 
-export import Step = Step;
-export import Tour = Tour;
 export { ShepherdTourContextConsumer as TourMethods, ShepherdTourContext };
