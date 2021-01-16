@@ -74,6 +74,6 @@ export const ShepherdTour: FunctionComponent<ShepherdProps> = props => {
   );
 };
 
-export type { default as Step } from 'shepherd.js/src/types/step';
-export type { default as Tour } from 'shepherd.js/src/types/tour';
+export import Step = Step;
+export import Tour = Tour;
 export { ShepherdTourContextConsumer as TourMethods, ShepherdTourContext };
