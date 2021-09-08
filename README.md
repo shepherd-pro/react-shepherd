@@ -83,7 +83,7 @@ You must pass an array of steps to `steps`, something like this:
 const steps = [
   {
     id: 'intro',
-    attachTo: '.first-element bottom',
+    attachTo: { element: '.first-element', on: 'bottom' },
     beforeShowPromise: function () {
       return new Promise(function (resolve) {
         setTimeout(function () {
