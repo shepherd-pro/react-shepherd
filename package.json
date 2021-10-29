@@ -41,9 +41,6 @@
       "release": true,
       "tokenRef": "GITHUB_AUTH"
     },
-    "npm": {
-      "ignoreVersion": true,
-      "skipChecks": false
-    }
+    "npm": false
   }
 }
