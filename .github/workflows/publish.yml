@@ -16,7 +16,7 @@ jobs:
     steps:
       # Checkout the repo
       - name: Checkout
-        uses: actions/checkout@v1
+        uses: actions/checkout@v2
 
       # Setup Node.js build environment
       - name: Setup Node
@@ -42,7 +42,7 @@ jobs:
         run: yarn build
 
       - name: Generate .npmrc
-        run: echo "//registry.npmjs.org/:_authToken=${NPM_TOKEN}" > .npmrc
+        run: echo "//registry.npmjs.org/:_authToken=${NPM_AUTH_TOKEN}" > .npmrc
 
       - name: Release version
         run: yarn release --ci --npm.skipChecks
