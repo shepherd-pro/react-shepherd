@@ -1,7 +1,11 @@
-import React, { Component } from 'react';
+import dynamic from 'next/dynamic';
+import { useContext } from 'react';
 import { Prism as SyntaxHighlighter } from 'react-syntax-highlighter';
-import { duotoneLight } from 'react-syntax-highlighter/dist/esm/styles/prism';
 
+const { duotoneLight } = dynamic(
+  () => import('react-syntax-highlighter/dist/esm/styles/prism'),
+  { ssr: false }
+);
 const installString = 'yarn add react-shepherd';
 const usageString = `
 import React, { Component } from 'react'
@@ -39,13 +43,17 @@ class App extends Component {
 }
 `;
 
-export default class HomePage extends Component {
-  render() {
-    return (
+export default function HomePage({children, tourContext}) {
+  const tour = useContext(tourContext);
+
+  return (
       <div>
         <div>
           <div>
-            {this.props.children}
+            {children}
+            <button className="button dark" onClick={tour.start}>
+              Start Tour
+            </button>
             <div>
               <h5>Installation</h5>
               <SyntaxHighlighter
@@ -70,5 +78,4 @@ export default class HomePage extends Component {
         </div>
       </div>
     );
-  }
 }

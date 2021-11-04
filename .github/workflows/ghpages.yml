@@ -13,7 +13,7 @@ jobs:
     - name: Use Node.js ${{ matrix.node-version }}
       uses: actions/setup-node@v1
       with:
-          node-version: 14.3.0
+        node-version: 14.3.0
 
     # Cache dependencies
     - name: Cache Dependencies
@@ -44,6 +44,6 @@ jobs:
       uses: crazy-max/ghaction-github-pages@v1.2.5
       with:
         # Build directory to deploy
-        build_dir: packages/example/build
+        build_dir: packages/example/.next
       env:
         GITHUB_TOKEN: ${{ secrets.GITHUB_TOKEN }}

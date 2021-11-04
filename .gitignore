@@ -7,6 +7,7 @@ node_modules
 # builds
 build
 dist
+.next
 .rpt2_cache
 
 # misc
