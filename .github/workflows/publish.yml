@@ -22,7 +22,7 @@ jobs:
       - name: Setup Node
         uses: actions/setup-node@v1
         with:
-          node-version: 14.3.0
+          node-version: 16
 
       # Cache dependencies
       - name: Cache Dependencies
