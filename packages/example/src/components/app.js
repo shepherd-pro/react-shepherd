@@ -4,8 +4,6 @@ import HomePage from './home';
 
 const ShepherdTour = dynamic(() => import('./tour'), { ssr: false });
 
-console.log('🐙', ShepherdTour);
-
 export default function App() {
   if (!ShepherdTour) return null;
 
