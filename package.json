@@ -19,6 +19,9 @@
     "start": "run-p start:*",
     "test": "yarn workspace react-shepherd test"
   },
+  "resolutions": {
+    "jsdom": "14.1.0"
+  },
   "release-it": {
     "plugins": {
       "release-it-yarn-workspaces": {
