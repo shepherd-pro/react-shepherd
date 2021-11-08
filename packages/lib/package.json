@@ -88,8 +88,8 @@
     "react-dom": "^17.0.2"
   },
   "engines": {
-    "node": ">=8",
-    "npm": ">=5"
+    "node": ">=14",
+    "npm": ">=7"
   },
   "publishConfig": {
     "registry": "https://registry.npmjs.org"

@@ -5,23 +5,15 @@
   "license": "MIT",
   "private": true,
   "dependencies": {
-    "react": "^16.8.0",
-    "react-dom": "^16.8.0",
-    "react-scripts": "^3.4.3",
-    "react-shepherd": "*",
-    "react-syntax-highlighter": "^15.3.1",
-    "shepherd.js": "^8.0.2"
+    "next": "latest",
+    "react": "latest",
+    "react-dom": "latest",
+    "react-syntax-highlighter": "^15.3.1"
   },
   "scripts": {
-    "start": "react-scripts start",
-    "build": "react-scripts build",
-    "test": "react-scripts test",
-    "eject": "react-scripts eject"
-  },
-  "browserslist": [
-    ">0.2%",
-    "not dead",
-    "not ie <= 11",
-    "not op_mini all"
-  ]
+    "dev": "next dev",
+    "build": "next build",
+    "lint": "next lint",
+    "start": "next start"
+  }
 }
