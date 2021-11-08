@@ -1,6 +1,6 @@
 import dynamic from 'next/dynamic';
-import Layout from '../components/layout'
-import HomePage from './home';
+import Layout from '@components/layout'
+import HomePage from '@components/home';
 
 const ShepherdTour = dynamic(() => import('./tour'), { ssr: false });
 
