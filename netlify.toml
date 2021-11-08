@@ -1,0 +1,6 @@
+[build]
+  command = "yarn build && cd packages/example && yarn build"
+  publish = "packages/example/.next"
+
+[[plugins]]
+  package = "@netlify/plugin-nextjs"
