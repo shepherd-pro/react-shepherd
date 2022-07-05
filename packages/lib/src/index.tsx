@@ -12,6 +12,7 @@ export interface ShepherdOptionsWithType extends Step.StepOptions {
 }
 
 interface ShepherdProps {
+  children?: React.ReactNode;
   steps: Array<ShepherdOptionsWithType>;
   tourOptions: Tour.TourOptions;
 }
