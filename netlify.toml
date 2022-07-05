@@ -1,5 +1,5 @@
 [build]
-  command = "yarn build && cd packages/example && yarn build"
+  command = "yarn build && cd packages/example && yarn build:netlify"
   publish = "packages/example/.next"
 
 [[plugins]]
