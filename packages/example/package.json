@@ -13,6 +13,7 @@
   "scripts": {
     "dev": "next dev",
     "build": "next build && next export",
+    "build:netlify": "next build",
     "lint": "next lint",
     "start": "next start"
   }
