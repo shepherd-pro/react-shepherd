@@ -12,7 +12,7 @@
   },
   "scripts": {
     "dev": "next dev",
-    "build": "next build && next export",
+    "build": "next build && next export && touch out/.nojekyll",
     "build:netlify": "next build",
     "lint": "next lint",
     "start": "next start"
