@@ -15,7 +15,6 @@
     "build": "next build && next export && touch out/.nojekyll",
     "build:netlify": "next build",
     "lint": "next lint",
-    "start": "next start",
-    "test": "jest"
+    "start": "next start"
   }
 }
