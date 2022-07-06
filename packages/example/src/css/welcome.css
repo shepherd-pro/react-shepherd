@@ -61,7 +61,7 @@ button.button {
 .hero-outer .hero-inner {
   margin: 0 auto 1em;
   text-align: center;
-  width: 540px;
+  width: 840px;
 }
 
 @media (max-width: 600px) {
