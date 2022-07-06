@@ -19,13 +19,12 @@
     "prebuild": "tsc --project ./tsconfig-declarations.json",
     "build": "rollup -c",
     "predeploy": "cd example && yarn && yarn build",
-    "deploy": "gh-pages -d example/build",
     "prepare": "install-peers",
     "problems": "tsc --noEmit",
     "release": "release-it",
     "start": "rollup -c -w",
-    "test": "cross-env CI=1 react-scripts test",
-    "test:watch": "react-scripts test"
+    "test": "cross-env CI=1 jest",
+    "test:watch": "jest --watch"
   },
   "dependencies": {
     "shepherd.js": "^10.0.0"
@@ -52,7 +51,7 @@
     "@babel/preset-env": "^7.5.4",
     "@babel/preset-react": "^7.0.0",
     "@svgr/rollup": "^5.1.0",
-    "@testing-library/react": "^10.0.0",
+    "@testing-library/react": "^13.3.0",
     "@types/jest": "^26.0.10",
     "@types/node": "^14.6.4",
     "@types/react": "^17.0.0",
@@ -66,10 +65,9 @@
     "eslint-plugin-promise": "^4.2.1",
     "eslint-plugin-react": "^7.14.2",
     "eslint-plugin-standard": "^5.0.0",
-    "gh-pages": "^2.0.1",
     "install-peers-cli": "^2.2.0",
-    "react-scripts": "^3.4.3",
-    "react-syntax-highlighter": "^15.3.0",
+    "jest": "^28.1.2",
+    "jest-environment-jsdom": "^28.1.2",
     "release-it": "^14.0.2",
     "release-it-lerna-changelog": "^3.1.0",
     "rollup": "^2.6.1",
@@ -80,6 +78,7 @@
     "rollup-plugin-postcss": "^3.1.1",
     "rollup-plugin-typescript": "^1.0.1",
     "rollup-plugin-url": "^3.0.0",
+    "ts-jest": "^28.0.5",
     "tslib": "^2.0.1",
     "typescript": "^4.0.2"
   },

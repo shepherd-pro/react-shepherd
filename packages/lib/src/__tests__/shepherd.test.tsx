@@ -1,6 +1,6 @@
 import React, { useContext } from 'react';
 import { render, fireEvent } from '@testing-library/react';
-import { ShepherdTour, ShepherdTourContext } from '../';
+import { ShepherdTour, ShepherdTourContext } from '..';
 
 const steps = [
   {
