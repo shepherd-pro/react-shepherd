@@ -3,8 +3,9 @@ import Shepherd from 'shepherd.js';
 import Step from 'shepherd.js/src/types/step';
 import Tour from 'shepherd.js/src/types/tour';
 
+type StepType = 'back' | 'cancel' | 'next';
 export interface ShepherdButtonWithType extends Step.StepOptionsButton {
-  type?: string;
+  type?: StepType;
 }
 
 export interface ShepherdOptionsWithType extends Step.StepOptions {
@@ -39,9 +40,7 @@ const addSteps = (steps: Array<Step.StepOptions>, tour: Tour) => {
       step.buttons = buttons.map((button: ShepherdButtonWithType) => {
         const { action, classes, disabled, label, secondary, text, type } = button;
         return {
-          // TypeScript doesn't have great support for dynamic method calls with
-          // bracket notation, so we use the `any` escape hatch
-          action: (tour as any)[type!] || action,
+          action: type ? tour[type] : action,
           classes,
           disabled,
           label,
