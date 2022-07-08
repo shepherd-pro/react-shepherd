@@ -15,7 +15,7 @@ export interface ShepherdOptionsWithType extends Step.StepOptions {
 interface ShepherdProps {
   steps: Array<ShepherdOptionsWithType>;
   tourOptions: Tour.TourOptions;
-  children?: React.ReactNode;
+  children: React.ReactNode;
 }
 
 const ShepherdTourContext = React.createContext<Tour | null>(null);
@@ -38,7 +38,9 @@ const addSteps = (steps: Array<Step.StepOptions>, tour: Tour) => {
 
     if (buttons) {
       step.buttons = buttons.map((button: ShepherdButtonWithType) => {
-        const { action, classes, disabled, label, secondary, text, type } = button;
+        const {
+          action, classes, disabled, label, secondary, text, type,
+        } = button;
         return {
           action: type ? tour[type] : action,
           classes,
@@ -46,7 +48,7 @@ const addSteps = (steps: Array<Step.StepOptions>, tour: Tour) => {
           label,
           secondary,
           text,
-          type
+          type,
         };
       });
     }
@@ -54,22 +56,22 @@ const addSteps = (steps: Array<Step.StepOptions>, tour: Tour) => {
     return step;
   });
 
-  parsedStepsforAction.forEach((step: any) => tour.addStep(step));
+  return parsedStepsforAction.forEach((step: any) => tour.addStep(step));
 };
 
-export const ShepherdTour: FunctionComponent<ShepherdProps> = props => {
-  const { tourOptions, steps } = props;
+export const ShepherdTour: FunctionComponent<ShepherdProps> = (props) => {
+  const { children, tourOptions, steps } = props;
   const tourObject = useMemo(() => {
-    const tourObject = new Shepherd.Tour(tourOptions);
+    const tourInstance = new Shepherd.Tour(tourOptions);
 
-    addSteps(steps, tourObject);
+    addSteps(steps, tourInstance);
 
-    return tourObject;
+    return tourInstance;
   }, [tourOptions, steps]);
 
   return (
     <ShepherdTourContext.Provider value={tourObject}>
-      {props.children}
+      {children}
     </ShepherdTourContext.Provider>
   );
 };
