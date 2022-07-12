@@ -39,8 +39,8 @@ jobs:
         run: yarn
 
       # Run linter
-      - name: Lint
-        run: yarn lint
+      # - name: Lint
+      #   run: yarn lint
 
       # Run tests
       - name: Run Tests
