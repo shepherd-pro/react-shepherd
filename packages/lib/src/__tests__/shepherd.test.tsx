@@ -14,29 +14,29 @@ const steps = [
       `
       Among many things, Tippy makes sure your steps never end up off screen or cropped by an overflow.
       Try resizing your browser to see what we mean.
-    `
+    `,
     ],
     classes: 'shepherd shepherd-welcome',
     buttons: [
       {
         type: 'cancel',
         classes: 'shepherd-button-secondary',
-        text: 'Exit'
+        text: 'Exit',
       },
       {
         type: 'next',
-        text: 'Next'
-      }
-    ]
-  }
+        text: 'Next',
+      },
+    ],
+  },
 ];
 const tourOptions = {
   defaultStepOptions: {
     cancelIcon: {
-      enabled: true
-    }
+      enabled: true,
+    },
   },
-  useModalOverlay: true
+  useModalOverlay: true,
 };
 
 describe('<ShepherdTour />', () => {
@@ -49,19 +49,16 @@ describe('<ShepherdTour />', () => {
       const tour = useContext(ShepherdTourContext);
 
       return (
-        <button className="button dark" onClick={tour?.start}>
+        <button className="button dark" type="button" onClick={tour?.start}>
           Start Tour
         </button>
       );
-    }
-    const TestApp = () => {
-
-      return (
-        <ShepherdTour steps={steps} tourOptions={tourOptions}>
-          <Button />
-        </ShepherdTour>
-      )
-    }
+    };
+    const TestApp = () => (
+      <ShepherdTour steps={steps} tourOptions={tourOptions}>
+        <Button />
+      </ShepherdTour>
+    );
 
     const container = render(<TestApp />);
     await fireEvent.click(container.getByText(/Start Tour/));
