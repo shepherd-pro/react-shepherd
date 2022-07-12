@@ -18,6 +18,7 @@
     "start:lib": "yarn workspace react-shepherd start",
     "start:site": "yarn workspace react-shepherd-example start",
     "start": "run-p start:*",
+    "lint": "yarn workspace react-shepherd lint",
     "test": "yarn workspace react-shepherd test"
   },
   "release-it": {
