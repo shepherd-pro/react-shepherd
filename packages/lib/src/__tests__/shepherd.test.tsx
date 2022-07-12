@@ -45,7 +45,7 @@ describe('<ShepherdTour />', () => {
   });
 
   it('renders the component and starts tour', async () => {
-    function Button() {
+    const Button = () => {
       const tour = useContext(ShepherdTourContext);
 
       return (
@@ -53,14 +53,12 @@ describe('<ShepherdTour />', () => {
           Start Tour
         </button>
       );
-    }
-    function TestApp() {
-      return (
-        <ShepherdTour steps={steps} tourOptions={tourOptions}>
-          <Button />
-        </ShepherdTour>
-      );
-    }
+    };
+    const TestApp = () => (
+      <ShepherdTour steps={steps} tourOptions={tourOptions}>
+        <Button />
+      </ShepherdTour>
+    );
 
     const container = render(<TestApp />);
     await fireEvent.click(container.getByText(/Start Tour/));
