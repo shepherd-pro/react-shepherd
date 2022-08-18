@@ -4,22 +4,17 @@
     "url": "https://github.com/shipshapecode/react-shepherd.git"
   },
   "private": true,
-  "workspaces": [
-    "packages/**/*"
-  ],
   "devDependencies": {
     "@netlify/plugin-nextjs": "^4.11.1",
-    "npm-run-all": "^4.1.5",
     "release-it-yarn-workspaces": "^2.0.1"
   },
   "scripts": {
-    "build": "yarn workspace react-shepherd build",
-    "release": "yarn workspace react-shepherd release",
-    "start:lib": "yarn workspace react-shepherd start",
-    "start:site": "yarn workspace react-shepherd-example start",
-    "start": "run-p start:*",
-    "lint": "yarn workspace react-shepherd lint",
-    "test": "yarn workspace react-shepherd test"
+    "build": "pnpm build",
+    "preinstall": "npx only-allow pnpm",
+    "release": "pnpm release",
+    "start": "pnpm start",
+    "lint": "pnpm lint",
+    "test": "pnpm test"
   },
   "release-it": {
     "plugins": {
