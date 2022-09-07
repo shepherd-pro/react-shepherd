@@ -36,12 +36,12 @@ jobs:
       # Install project dependencies
       - name: Install Dependencies
         if: steps.cache.outputs.cache-hit != 'true'
-        run: yarn
+        run: pnpm
 
       # Run linter
       - name: Lint
-        run: yarn lint
+        run: pnpm lint
 
       # Run tests
       - name: Run Tests
-        run: yarn test
+        run: pnpm test

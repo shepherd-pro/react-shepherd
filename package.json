@@ -6,6 +6,7 @@
   "private": true,
   "devDependencies": {
     "@netlify/plugin-nextjs": "^4.11.1",
+    "npm-run-all": "^4.1.5",
     "release-it-yarn-workspaces": "^2.0.1"
   },
   "scripts": {

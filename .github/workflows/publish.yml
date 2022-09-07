@@ -36,15 +36,15 @@ jobs:
       # Install project dependencies
       - name: Install Dependencies
         if: steps.cache.outputs.cache-hit != 'true'
-        run: yarn
+        run: pnpm
 
       - name: Build
-        run: yarn build
+        run: pnpm build
 
       - name: Generate .npmrc
         run: echo "//registry.npmjs.org/:_authToken=${NPM_AUTH_TOKEN}" > .npmrc
 
       - name: Release version
-        run: yarn release --ci --npm.skipChecks
+        run: pnpm release --ci --npm.skipChecks
         env:
           GITHUB_AUTH: ${{ secrets.GITHUB_TOKEN }}
