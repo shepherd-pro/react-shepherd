@@ -1,49 +1,52 @@
 name: Build and GH Pages Deploy
 
 on:
-  release:
-    types: [created]
+  push:
+    branches:
+      - master
+    paths:
+      - packages/example/**
 
 jobs:
   build:
     runs-on: ubuntu-latest
 
     steps:
-    - uses: actions/checkout@v1
-    - name: Use Node.js ${{ matrix.node-version }}
-      uses: actions/setup-node@v1
-      with:
-        node-version: 16
+      - uses: actions/checkout@v1
+      - name: Use Node.js ${{ matrix.node-version }}
+        uses: actions/setup-node@v1
+        with:
+          node-version: 16
 
-    # Cache dependencies
-    - name: Cache Dependencies
-      uses: actions/cache@v2
-      id: cache
-      with:
-        path: |
-          **/node_modules
-        key: yarn-${{ hashFiles('**/package.json', 'yarn.lock') }}
+      # Cache dependencies
+      - name: Cache Dependencies
+        uses: actions/cache@v2
+        id: cache
+        with:
+          path: |
+            **/node_modules
+          key: yarn-${{ hashFiles('**/package.json', 'yarn.lock') }}
 
-    # Install project dependencies
-    - name: Install Dependencies
-      if: steps.cache.outputs.cache-hit != 'true'
-      run: yarn
+      # Install project dependencies
+      - name: Install Dependencies
+        if: steps.cache.outputs.cache-hit != 'true'
+        run: yarn
 
-    - name: Build Shepherd
-      run: yarn build
+      - name: Build Shepherd
+        run: yarn build
 
-    # Build the example site
-    - name: Build Site
-      run: |
-        yarn
-        yarn build
-      working-directory: ./packages/example
+      # Build the example site
+      - name: Build Site
+        run: |
+          yarn
+          yarn build
+        working-directory: ./packages/example
 
-    - name: GitHub Pages
-      if: success()
-      uses: crazy-max/ghaction-github-pages@v1.2.5
-      with:
-        # Build directory to deploy
-        build_dir: packages/example/out
-      env:
-        GITHUB_TOKEN: ${{ secrets.GITHUB_TOKEN }}
+      - name: GitHub Pages
+        if: success()
+        uses: crazy-max/ghaction-github-pages@v1.2.5
+        with:
+          # Build directory to deploy
+          build_dir: packages/example/out
+        env:
+          GITHUB_TOKEN: ${{ secrets.GITHUB_TOKEN }}
