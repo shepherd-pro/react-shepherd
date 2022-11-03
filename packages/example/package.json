@@ -12,9 +12,13 @@
   },
   "scripts": {
     "dev": "next dev",
+    "dev:static": "serve ./out",
     "build": "next build && next export && touch out/.nojekyll",
-    "build:netlify": "next build",
+    "build:vercel": "next build",
     "lint": "next lint",
     "start": "next start"
+  },
+  "devDependencies": {
+    "serve": "^14.0.1"
   }
 }

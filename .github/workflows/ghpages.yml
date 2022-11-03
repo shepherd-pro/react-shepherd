@@ -1,11 +1,8 @@
 name: Build and GH Pages Deploy
 
 on:
-  push:
-    branches:
-      - master
-    paths:
-      - packages/example/**
+  release:
+    types: [created]
 
 jobs:
   build:
