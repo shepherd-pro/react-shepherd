@@ -44,9 +44,7 @@ jobs:
 
       - name: GitHub Pages
         if: success()
-        uses: crazy-max/ghaction-github-pages@v1.2.5
+        uses: JamesIves/github-pages-deploy-action@4.4.0
         with:
-          # Build directory to deploy
-          build_dir: packages/example/out
-        env:
-          GITHUB_TOKEN: ${{ secrets.GITHUB_TOKEN }}
+          branch: gh-pages
+          folder: packages/example/out
