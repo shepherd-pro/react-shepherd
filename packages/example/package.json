@@ -14,7 +14,7 @@
     "dev": "next dev",
     "dev:static": "serve ./out",
     "build": "next build && next export && touch out/.nojekyll",
-    "build:vercel": "next build",
+    "build:netlify": "next build",
     "lint": "next lint",
     "start": "next start"
   },
