@@ -5,7 +5,7 @@
   "license": "MIT",
   "private": true,
   "dependencies": {
-    "next": "latest",
+    "next": "12.2.0",
     "react": "latest",
     "react-dom": "latest",
     "react-syntax-highlighter": "^15.5.0"
