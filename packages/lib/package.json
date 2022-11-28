@@ -30,7 +30,7 @@
     "lint:fix": "yarn lint --fix"
   },
   "dependencies": {
-    "shepherd.js": "^10.0.0"
+    "shepherd.js": "^11.0.0"
   },
   "devDependencies": {
     "@babel/core": "^7.5.4",
