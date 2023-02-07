@@ -30,6 +30,7 @@
     "lint:fix": "yarn lint --fix"
   },
   "dependencies": {
+    "resize-observer-polyfill": "^1.5.1",
     "shepherd.js": "^11.0.1"
   },
   "devDependencies": {

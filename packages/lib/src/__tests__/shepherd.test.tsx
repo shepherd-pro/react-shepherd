@@ -1,6 +1,9 @@
 import React, { useContext } from 'react';
+import ResizeObserver from 'resize-observer-polyfill';
 import { render, fireEvent } from '@testing-library/react';
 import { ShepherdTour, ShepherdTourContext } from '..';
+
+window.ResizeObserver = ResizeObserver;
 
 const steps = [
   {
