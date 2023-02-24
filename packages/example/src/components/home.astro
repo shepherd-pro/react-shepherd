@@ -1,0 +1,78 @@
+---
+import { Prism } from '@astrojs/prism';
+import Tour from './Tour';
+
+const installString = 'yarn add react-shepherd';
+const componentSetupString = `
+import React, { Component } from 'react'
+import { useShepherdTour } from 'react-shepherd'
+import newSteps from './steps'
+
+const tourOptions = {
+  defaultStepOptions: {
+    cancelIcon: {
+      enabled: true
+    }
+  },
+  useModalOverlay: true
+};
+`;
+const usageString = `
+${componentSetupString}
+
+function Button() {
+  const tour = useContext(ShepherdTourContext);
+
+  return (
+    <button className="button dark" onClick={tour.start}>
+      Start Tour
+    </button>
+  );
+}
+
+class App extends Component {
+  render() {
+    return (
+      <div>
+        <ShepherdTour steps={newSteps} tourOptions={tourOptions}>
+          <Button />
+        </ShepherdTour>
+      </div>
+    );
+}
+`;
+const usageHoookString = `
+${componentSetupString}
+
+export default function App() {
+  const tour = useShepherdTour({ tourOptions, steps: newSteps });
+
+  return (
+    <button class="button dark" onClick={tour.start}>
+      Start Tour
+    </button>
+  );
+}
+`;
+
+---
+
+<div>
+  <div>
+    <div>
+      <Tour client:only="react" />
+      <div>
+        <h5>Installation</h5>
+        <Prism lang="js" code={installString} />
+      </div>
+      <div>
+        <h5>Usage via Provider/Context</h5>
+        <Prism lang="js" code={usageString} />
+      </div>
+      <div>
+        <h5>Usage via Hooks</h5>
+        <Prism lang="js" code={usageHoookString} />
+      </div>
+    </div>
+  </div>
+</div>

@@ -16,7 +16,7 @@
     "build": "yarn workspace react-shepherd build",
     "release": "yarn workspace react-shepherd release",
     "start:lib": "yarn workspace react-shepherd start",
-    "start:site": "yarn workspace react-shepherd-example start",
+    "start:site": "yarn workspace react-shepherd-example dev",
     "start": "run-p start:*",
     "lint": "yarn workspace react-shepherd lint",
     "test": "yarn workspace react-shepherd test"
