@@ -92,7 +92,7 @@
     "react-dom": "^17.0.2 || 18.x"
   },
   "engines": {
-    "node": ">=14",
+    "node": ">=16",
     "npm": ">=7"
   },
   "publishConfig": {
