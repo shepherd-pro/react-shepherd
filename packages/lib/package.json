@@ -54,7 +54,7 @@
     "@babel/plugin-syntax-import-meta": "^7.2.0",
     "@babel/preset-env": "^7.5.4",
     "@babel/preset-react": "^7.0.0",
-    "@svgr/rollup": "^6.2.1",
+    "@svgr/rollup": "^8.0.1",
     "@testing-library/react": "^14.0.0",
     "@types/jest": "^29.0.0",
     "@types/node": "^18.0.3",
