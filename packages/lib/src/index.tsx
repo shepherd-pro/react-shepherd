@@ -59,6 +59,19 @@ const addSteps = (steps: Array<Step.StepOptions>, tour: Tour) => {
   return parsedStepsforAction.forEach((step: any) => tour.addStep(step));
 };
 
+// for instances where Context can't be used or doesn't make sense
+export const useShepherdTour = ({ tourOptions, steps }: Pick<ShepherdProps, 'steps' | 'tourOptions'>) => {
+  const tourObject = useMemo(() => {
+    const tourInstance = new Shepherd.Tour(tourOptions);
+
+    addSteps(steps, tourInstance);
+
+    return tourInstance;
+  }, [tourOptions, steps]);
+
+  return tourObject;
+};
+
 export const ShepherdTour: FC<ShepherdProps> = ({ children, tourOptions, steps }) => {
   const tourObject = useMemo(() => {
     const tourInstance = new Shepherd.Tour(tourOptions);
