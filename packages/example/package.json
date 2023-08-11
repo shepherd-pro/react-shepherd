@@ -5,9 +5,9 @@
   "license": "MIT",
   "private": true,
   "dependencies": {
-    "@astrojs/prism": "^2.0.0",
-    "@astrojs/react": "^2.0.2",
-    "astro": "^2.0.15",
+    "@astrojs/prism": "^2.1.2",
+    "@astrojs/react": "^2.2.1",
+    "astro": "^2.10.7",
     "react": "latest",
     "react-dom": "latest",
     "react-syntax-highlighter": "^15.5.0"
