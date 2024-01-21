@@ -2,7 +2,7 @@
   "name": "react-shepherd",
   "version": "4.2.0",
   "description": "A React wrapper for the site tour library Shepherd",
-  "homepage": "https://shipshapecode.github.io/react-shepherd/",
+  "homepage": "https://react-shepherd.vercel.app/",
   "repository": {
     "type": "git",
     "url": "https://github.com/shipshapecode/react-shepherd.git"
