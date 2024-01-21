@@ -1,6 +1,6 @@
 {
   "name": "react-shepherd",
-  "version": "4.2.0",
+  "version": "4.3.0",
   "description": "A React wrapper for the site tour library Shepherd",
   "homepage": "https://react-shepherd.vercel.app/",
   "repository": {
