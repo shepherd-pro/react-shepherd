@@ -75,7 +75,7 @@
     "jest-environment-jsdom": "^29.0.1",
     "release-it": "^14.0.2",
     "release-it-lerna-changelog": "^5.0.0",
-    "rollup": "^2.6.1",
+    "rollup": "^4.9.6",
     "rollup-plugin-babel": "^4.3.3",
     "rollup-plugin-commonjs": "^10.0.1",
     "rollup-plugin-node-resolve": "^5.2.0",
