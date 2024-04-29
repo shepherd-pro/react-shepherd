@@ -73,7 +73,7 @@
     "install-peers-cli": "^2.2.0",
     "jest": "^28.1.2",
     "jest-environment-jsdom": "^29.0.1",
-    "release-it": "^14.0.2",
+    "release-it": "^17.2.1",
     "release-it-lerna-changelog": "^5.0.0",
     "rollup": "^2.6.1",
     "rollup-plugin-babel": "^4.3.3",
