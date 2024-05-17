@@ -1,4 +1,8 @@
-This repository is no longer being maintained and all further development is at the main [shepherd](https://github.com/shepherd-pro/shepherd/tree/main/packages/react) repo.
+**This repository is no longer being maintained and all further development is at the main [shepherd](https://github.com/shepherd-pro/shepherd/tree/main/packages/react) repo.**
+
+
+
+
 
 # react-shepherd
 
